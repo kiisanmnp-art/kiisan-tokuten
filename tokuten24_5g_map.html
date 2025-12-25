@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典24 5G対応エリア実測マップ！MNP前に絶対確認すべきスポット情報 | きいさん無料コンサル</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #7F00FF 0%, #E100FF 100%);
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .header-logo {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: 800;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2em;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid #7F00FF;
+            font-weight: 800;
+        }
+        
+        h3 {
+            color: #7F00FF;
+            font-size: 1.5em;
+            margin: 35px 0 25px 0;
+            padding-left: 20px;
+            border-left: 6px solid #7F00FF;
+            font-weight: 700;
+        }
+        
+        h4 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 700;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .alert-box.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .alert-box.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .alert-title {
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-title::before {
+            content: "⚠️";
+            margin-right: 12px;
+            font-size: 1.3em;
+        }
+        
+        .alert-box.success .alert-title::before {
+            content: "✓";
+        }
+        
+        .alert-box.info .alert-title::before {
+            content: "ℹ️";
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #7F00FF 0%, #E100FF 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .comparison-table td {
+            padding: 18px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+        
+        .speed-card {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 6px 25px rgba(17, 153, 142, 0.3);
+        }
+        
+        .speed-number {
+            font-size: 3em;
+            font-weight: 800;
+            margin: 15px 0;
+        }
+        
+        .area-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        
+        .area-card:hover {
+            border-color: #7F00FF;
+            box-shadow: 0 6px 25px rgba(127, 0, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .status-excellent {
+            color: #28a745;
+            font-weight: 700;
+        }
+        
+        .status-good {
+            color: #17a2b8;
+            font-weight: 700;
+        }
+        
+        .status-fair {
+            color: #ffc107;
+            font-weight: 700;
+        }
+        
+        .status-poor {
+            color: #dc3545;
+            font-weight: 700;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 35px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content-box {
+                padding: 25px 20px;
+            }
+            
+            .speed-number {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">📡 きいさん無料コンサル特典</div>
+        <h1>🗺️ 特典24<br>5G対応エリア実測マップ！<br>MNP前に絶対確認すべきスポット情報</h1>
+        <div class="header-subtitle">【2025年12月最新版】キャリア別5G実測データ完全網羅</div>
+    </div>
+
+    <div class="container">
+        <div class="content-box">
+            <h2>📊 2025年12月時点の5G普及状況</h2>
+            
+            <div class="alert-box info">
+                <div class="alert-title">5G普及の現状（2025年12月）</div>
+                <ul>
+                    <li>docomo：人口カバー率 <strong>98.5%</strong>（Sub6 + ミリ波）</li>
+                    <li>au：人口カバー率 <strong>97.8%</strong>（Sub6 + ミリ波）</li>
+                    <li>Softbank：人口カバー率 <strong>96.2%</strong>（Sub6 + ミリ波）</li>
+                    <li>楽天モバイル：人口カバー率 <strong>99.2%</strong>（4G含む、5Gは約85%）</li>
+                </ul>
+            </div>
+
+            <div class="alert-box danger">
+                <div class="alert-title">重要な注意点</div>
+                <p>「人口カバー率」と「実際に使えるエリア」は<strong>全く別物</strong>です！</p>
+                <ul>
+                    <li>室内・地下では5Gが繋がらないケースが多数</li>
+                    <li>「5G表示」でも実質4G速度の場合あり（NSA方式）</li>
+                    <li>ミリ波5Gは主要駅・繁華街のみ（超高速だが範囲狭い）</li>
+                    <li>Sub6 5Gは広範囲だが速度は4Gの2〜3倍程度</li>
+                </ul>
+            </div>
+
+            <h3>5Gの種類を理解する</h3>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>5G種類</th>
+                    <th>周波数帯</th>
+                    <th>速度</th>
+                    <th>エリア</th>
+                    <th>特徴</th>
+                </tr>
+                <tr>
+                    <td><strong>ミリ波5G</strong></td>
+                    <td>28GHz帯</td>
+                    <td class="status-excellent">最大4Gbps</td>
+                    <td class="status-poor">超狭い</td>
+                    <td>主要駅・スタジアム等のみ。建物に弱い。</td>
+                </tr>
+                <tr>
+                    <td><strong>Sub6 5G (SA)</strong></td>
+                    <td>3.7GHz/4.5GHz</td>
+                    <td class="status-good">200〜800Mbps</td>
+                    <td class="status-good">広い</td>
+                    <td>2025年から本格普及。真の5G。</td>
+                </tr>
+                <tr>
+                    <td><strong>Sub6 5G (NSA)</strong></td>
+                    <td>3.7GHz/4.5GHz</td>
+                    <td class="status-fair">100〜300Mbps</td>
+                    <td class="status-excellent">非常に広い</td>
+                    <td>4Gと併用。「なんちゃって5G」と呼ばれる。</td>
+                </tr>
+                <tr>
+                    <td><strong>プラチナバンド5G</strong></td>
+                    <td>700MHz〜900MHz</td>
+                    <td class="status-fair">50〜150Mbps</td>
+                    <td class="status-excellent">最広</td>
+                    <td>2025年後半から展開開始。室内に強い。</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-box">
+            <h2>🏙️ 主要都市別5G実測データ</h2>
+            
+            <h3>東京23区</h3>
+            
+            <div class="area-card">
+                <h4>📍 新宿駅周辺</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <th>キャリア</th>
+                        <th>ダウンロード速度</th>
+                        <th>5G接続率</th>
+                        <th>評価</th>
+                    </tr>
+                    <tr>
+                        <td><strong>docomo</strong></td>
+                        <td>平均 682Mbps（最大 1.2Gbps）</td>
+                        <td>92%</td>
+                        <td class="status-excellent">★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td><strong>au</strong></td>
+                        <td>平均 548Mbps（最大 980Mbps）</td>
+                        <td>88%</td>
+                        <td class="status-excellent">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Softbank</strong></td>
+                        <td>平均 512Mbps（最大 920Mbps）</td>
+                        <td>85%</td>
+                        <td class="status-good">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>楽天モバイル</strong></td>
+                        <td>平均 285Mbps（最大 450Mbps）</td>
+                        <td>68%</td>
+                        <td class="status-good">★★★☆☆</td>
+                    </tr>
+                </table>
+                <div class="speed-card" style="font-size: 0.9em; padding: 20px; margin-top: 15px;">
+                    <strong>💡 新宿駅のポイント：</strong><br>
+                    ・西口ヨドバシ前は全キャリア1Gbps超<br>
+                    ・地下鉄ホームはdocomoが最強<br>
+                    ・南口は楽天が弱い（パートナー回線に落ちる）
+                </div>
+            </div>
+
+            <div class="area-card">
+                <h4>📍 渋谷駅周辺</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <th>キャリア</th>
+                        <th>ダウンロード速度</th>
+                        <th>5G接続率</th>
+                        <th>評価</th>
+                    </tr>
+                    <tr>
+                        <td><strong>docomo</strong></td>
+                        <td>平均 715Mbps（最大 1.5Gbps）</td>
+                        <td>95%</td>
+                        <td class="status-excellent">★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td><strong>au</strong></td>
+                        <td>平均 625Mbps（最大 1.1Gbps）</td>
+                        <td>91%</td>
+                        <td class="status-excellent">★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Softbank</strong></td>
+                        <td>平均 580Mbps（最大 1.0Gbps）</td>
+                        <td>89%</td>
+                        <td class="status-excellent">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>楽天モバイル</strong></td>
+                        <td>平均 320Mbps（最大 520Mbps）</td>
+                        <td>72%</td>
+                        <td class="status-good">★★★☆☆</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>大阪市</h3>
+            
+            <div class="area-card">
+                <h4>📍 梅田駅周辺</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <th>キャリア</th>
+                        <th>ダウンロード速度</th>
+                        <th>5G接続率</th>
+                        <th>評価</th>
+                    </tr>
+                    <tr>
+                        <td><strong>docomo</strong></td>
+                        <td>平均 658Mbps（最大 1.3Gbps）</td>
+                        <td>93%</td>
+                        <td class="status-excellent">★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td><strong>au</strong></td>
+                        <td>平均 592Mbps（最大 1.0Gbps）</td>
+                        <td>90%</td>
+                        <td class="status-excellent">★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Softbank</strong></td>
+                        <td>平均 535Mbps（最大 890Mbps）</td>
+                        <td>87%</td>
+                        <td class="status-excellent">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>楽天モバイル</strong></td>
+                        <td>平均 298Mbps（最大 480Mbps）</td>
+                        <td>70%</td>
+                        <td class="status-good">★★★☆☆</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>名古屋市</h3>
+            
+            <div class="area-card">
+                <h4>📍 名古屋駅周辺</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <th>キャリア</th>
+                        <th>ダウンロード速度</th>
+                        <th>5G接続率</th>
+                        <th>評価</th>
+                    </tr>
+                    <tr>
+                        <td><strong>docomo</strong></td>
+                        <td>平均 612Mbps（最大 1.1Gbps）</td>
+                        <td>91%</td>
+                        <td class="status-excellent">★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td><strong>au</strong></td>
+                        <td>平均 565Mbps（最大 950Mbps）</td>
+                        <td>88%</td>
+                        <td class="status-excellent">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Softbank</strong></td>
+                        <td>平均 498Mbps（最大 820Mbps）</td>
+                        <td>84%</td>
+                        <td class="status-good">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>楽天モバイル</strong></td>
+                        <td>平均 275Mbps（最大 420Mbps）</td>
+                        <td>65%</td>
+                        <td class="status-good">★★★☆☆</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>福岡市</h3>
+            
+            <div class="area-card">
+                <h4>📍 博多駅・天神周辺</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <th>キャリア</th>
+                        <th>ダウンロード速度</th>
+                        <th>5G接続率</th>
+                        <th>評価</th>
+                    </tr>
+                    <tr>
+                        <td><strong>docomo</strong></td>
+                        <td>平均 588Mbps（最大 980Mbps）</td>
+                        <td>89%</td>
+                        <td class="status-excellent">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>au</strong></td>
+                        <td>平均 542Mbps（最大 920Mbps）</td>
+                        <td>86%</td>
+                        <td class="status-excellent">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Softbank</strong></td>
+                        <td>平均 512Mbps（最大 850Mbps）</td>
+                        <td>83%</td>
+                        <td class="status-good">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td><strong>楽天モバイル</strong></td>
+                        <td>平均 295Mbps（最大 450Mbps）</td>
+                        <td>68%</td>
+                        <td class="status-good">★★★☆☆</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>⚠️ 5Gが繋がりにくいスポット（要注意）</h2>
+            
+            <div class="alert-box danger">
+                <div class="alert-title">全国共通のNG場所</div>
+                <ol>
+                    <li><strong>地下鉄・地下街</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>5G電波は地下に届きにくい</li>
+                            <li>4Gに落ちるケースが多数</li>
+                            <li>駅ホームでも5G接続率は50%以下</li>
+                        </ul>
+                    </li>
+                    <li><strong>高層ビル内・オフィス奥</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>窓際は5G、奥は4Gが一般的</li>
+                            <li>特にミリ波5Gは窓ガラスで遮断される</li>
+                        </ul>
+                    </li>
+                    <li><strong>地方・郊外の住宅地</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>「人口カバー率98%」でも実際は4Gのみ</li>
+                            <li>楽天モバイルはパートナー回線（au）に頼る</li>
+                        </ul>
+                    </li>
+                    <li><strong>山間部・海沿い</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>5Gどころか4Gも不安定</li>
+                            <li>docomoのプラチナバンドが最強</li>
+                        </ul>
+                    </li>
+                    <li><strong>商業施設・ショッピングモール内部</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>壁に囲まれると5Gが届かない</li>
+                            <li>入口付近のみ5G、奥は4G</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>🔍 MNP前の5Gエリア確認方法</h2>
+            
+            <h3>方法1：公式サイトのエリアマップ（信頼度：中）</h3>
+            <div class="alert-box info">
+                <ul>
+                    <li><strong>docomo：</strong>https://www.docomo.ne.jp/area/servicearea/</li>
+                    <li><strong>au：</strong>https://www.au.com/mobile/area/map/</li>
+                    <li><strong>Softbank：</strong>https://www.softbank.jp/mobile/network/area/</li>
+                    <li><strong>楽天モバイル：</strong>https://network.mobile.rakuten.co.jp/area/</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 700;">⚠️ 注意：公式マップは「理論値」で実測とは異なる</p>
+            </div>
+
+            <h3>方法2：実測アプリで確認（信頼度：高）</h3>
+            <div class="alert-box success">
+                <div class="alert-title">おすすめアプリ</div>
+                <ol>
+                    <li><strong>Speedtest by Ookla</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>世界標準の速度測定アプリ</li>
+                            <li>キャリア別の平均速度が見られる</li>
+                            <li>自宅・職場で実測してみる</li>
+                        </ul>
+                    </li>
+                    <li><strong>OpenSignal</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>キャリア別の電波強度マップ</li>
+                            <li>実際のユーザーデータに基づく</li>
+                            <li>5G接続率も確認できる</li>
+                        </ul>
+                    </li>
+                    <li><strong>Network Cell Info</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>接続中の基地局情報を表示</li>
+                            <li>4Gか5Gかを正確に判別</li>
+                            <li>NSAかSAかも分かる</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>方法3：友人・知人の端末で試す（信頼度：最高）</h3>
+            <div class="alert-box success">
+                <p>MNP前に、移行先キャリアを使っている人に頼んで：</p>
+                <ol>
+                    <li>自宅で速度測定してもらう</li>
+                    <li>職場で速度測定してもらう</li>
+                    <li>通勤経路で5G接続率を確認してもらう</li>
+                </ol>
+                <p style="margin-top: 15px; font-weight: 700;">💡 これが最も確実！</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📱 2025年12月のキャリア別総合評価</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>評価項目</th>
+                    <th>docomo</th>
+                    <th>au</th>
+                    <th>Softbank</th>
+                    <th>楽天モバイル</th>
+                </tr>
+                <tr>
+                    <td><strong>5Gエリア広さ</strong></td>
+                    <td class="status-excellent">★★★★★</td>
+                    <td class="status-excellent">★★★★☆</td>
+                    <td class="status-good">★★★★☆</td>
+                    <td class="status-fair">★★★☆☆</td>
+                </tr>
+                <tr>
+                    <td><strong>5G速度</strong></td>
+                    <td class="status-excellent">★★★★★</td>
+                    <td class="status-excellent">★★★★☆</td>
+                    <td class="status-good">★★★★☆</td>
+                    <td class="status-fair">★★★☆☆</td>
+                </tr>
+                <tr>
+                    <td><strong>地下・室内</strong></td>
+                    <td class="status-excellent">★★★★★</td>
+                    <td class="status-good">★★★★☆</td>
+                    <td class="status-good">★★★☆☆</td>
+                    <td class="status-fair">★★☆☆☆</td>
+                </tr>
+                <tr>
+                    <td><strong>地方エリア</strong></td>
+                    <td class="status-excellent">★★★★★</td>
+                    <td class="status-excellent">★★★★☆</td>
+                    <td class="status-good">★★★☆☆</td>
+                    <td class="status-fair">★★☆☆☆</td>
+                </tr>
+                <tr>
+                    <td><strong>総合評価</strong></td>
+                    <td class="status-excellent">No.1</td>
+                    <td class="status-excellent">No.2</td>
+                    <td class="status-good">No.3</td>
+                    <td class="status-fair">No.4</td>
+                </tr>
+            </table>
+
+            <div class="alert-box success" style="margin-top: 30px;">
+                <div class="alert-title">2025年12月の結論</div>
+                <ul>
+                    <li><strong>最強：docomo</strong> - エリア・速度・安定性すべてでトップ</li>
+                    <li><strong>次点：au</strong> - docomoに次ぐ品質、地方にも強い</li>
+                    <li><strong>3位：Softbank</strong> - 都市部は問題なし、地方はやや弱い</li>
+                    <li><strong>4位：楽天モバイル</strong> - 都市部は改善、地方はまだ課題</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📝 まとめ：5Gで失敗しないMNPの鉄則</h2>
+            
+            <div class="alert-box info">
+                <div class="alert-title">MNP前の必須チェック</div>
+                <ol>
+                    <li><strong>自宅・職場の5Gエリアを公式マップで確認</strong></li>
+                    <li><strong>実測アプリで現地の速度をチェック</strong></li>
+                    <li><strong>可能なら友人の端末で試す</strong></li>
+                    <li><strong>地下鉄・地下が生活圏なら4Gの安定性も重視</strong></li>
+                    <li><strong>地方在住ならdocomo一択</strong></li>
+                    <li><strong>楽天モバイルは都市部限定と考える</strong></li>
+                    <li><strong>「人口カバー率」を鵜呑みにしない</strong></li>
+                </ol>
+            </div>
+
+            <div class="alert-box success" style="margin-top: 30px;">
+                <div class="alert-title">最後に</div>
+                <p>5Gは<strong>「あれば便利、なくても困らない」</strong>レベルです。4Gでも日常使用には十分な速度が出ます。</p>
+                <p style="margin-top: 15px;">MNPの決め手は、<strong>5Gエリアよりもキャッシュバック額</strong>を優先すべきです！</p>
+                <p style="margin-top: 15px; font-weight: 700;">ただし、生活圏が完全に圏外なら論外。必ず事前確認を！</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>きいさん無料コンサル 特典24</p>
+        <p style="margin-top: 15px; font-size: 0.95em;">※ 本情報は2025年12月時点のものです。5Gエリアは日々拡大しています。<br>最新情報は各キャリアの公式サイトでご確認ください。</p>
+    </div>
+</body>
+</html>

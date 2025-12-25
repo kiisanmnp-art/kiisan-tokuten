@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典19 MNP予約番号有効期限ギリギリ活用術！15日を最大化するテクニック | きいさん無料コンサル</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .header-logo {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: 800;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2em;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        h3 {
+            color: #e74c3c;
+            font-size: 1.4em;
+            margin: 30px 0 20px 0;
+            padding-left: 15px;
+            border-left: 5px solid #e74c3c;
+        }
+        
+        h4 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin: 25px 0 15px 0;
+            font-weight: bold;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .alert-box.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .alert-box.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .alert-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-title::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .alert-box.success .alert-title::before {
+            content: "✓";
+        }
+        
+        .alert-box.info .alert-title::before {
+            content: "ℹ️";
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 30px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 20px 0 20px 60px;
+            border-left: 3px solid #e74c3c;
+            margin-left: 20px;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #e74c3c;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #e74c3c;
+        }
+        
+        .timeline-day {
+            position: absolute;
+            left: -50px;
+            top: 20px;
+            background: #2c3e50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+        
+        .strategy-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .strategy-card h4 {
+            color: white;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+        .strategy-steps {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        
+        .step-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .step-item:last-child {
+            border-bottom: none;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .calendar-simulator {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .calendar-day {
+            aspect-ratio: 1;
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .calendar-day:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .calendar-day.issued {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+        }
+        
+        .calendar-day.campaign {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+        
+        .calendar-day.danger {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+        
+        .calendar-day.optimal {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+        
+        .day-number {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .day-label {
+            font-size: 0.7em;
+            color: #666;
+        }
+        
+        .case-study {
+            background: #e9ecef;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .case-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .case-title::before {
+            content: "📊";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pro-tip::before {
+            content: "💡";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 4em;
+            opacity: 0.2;
+        }
+        
+        .pro-tip h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .checklist {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .checklist-item {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checklist-item input {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .content-box {
+                padding: 25px 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+            
+            .calendar-grid {
+                grid-template-columns: repeat(7, 1fr);
+                gap: 5px;
+            }
+            
+            .timeline-item {
+                padding-left: 40px;
+            }
+            
+            .timeline-day {
+                left: -60px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">⏰ きいさん無料コンサル特典</div>
+        <h1>⏱️ 特典19<br>MNP予約番号有効期限ギリギリ活用術！<br>15日を最大化するテクニック</h1>
+        <div class="header-subtitle">予約番号の15日間を戦略的に使い倒す完全マニュアル</div>
+    </div>
+
+    <div class="container">
+        <div class="content-box">
+            <h2>⏰ MNP予約番号の15日間を制する者がMNPを制す</h2>
+            
+            <div class="alert-box info">
+                <div class="alert-title">MNP予約番号の基本ルール</div>
+                <ul>
+                    <li><strong>有効期限：発行日を含めて15日間</strong></li>
+                    <li>期限切れ後は再発行が必要（回数制限なし）</li>
+                    <li>オンライン契約は「残り日数10日以上」が条件の場合が多い</li>
+                    <li>店舗契約は「残り日数7日以上」推奨</li>
+                    <li>期限ギリギリまで粘ることで最大のメリットを得られる</li>
+                </ul>
+            </div>
+
+            <h3>なぜ15日間を最大活用すべきなのか？</h3>
+            
+            <div class="strategy-card">
+                <h4>15日間フル活用で得られる5つのメリット</h4>
+                <div class="strategy-steps">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <strong>キャンペーン待ち伏せ</strong>：月末・週末・給料日などの高額CB期間を狙い撃ち
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <strong>複数店舗の比較時間</strong>：焦らず5〜10店舗を回って最高条件を探せる
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <strong>引き止めポイント交渉</strong>：現キャリアから最大限のポイント獲得
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <strong>端末在庫の確認猶予</strong>：希望機種の入荷を待つ余裕ができる
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <strong>契約審査の再チャレンジ</strong>：1店舗で断られても別店舗で再挑戦可能
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📅 15日間完全活用スケジュール</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-day">1日目</div>
+                    <h4>MNP予約番号発行＋情報収集開始</h4>
+                    <div class="timeline-content">
+                        <strong>やるべきこと：</strong>
+                        <ul>
+                            <li>現キャリアのマイページから予約番号を発行</li>
+                            <li>発行時刻と有効期限を必ずメモ（スクショ推奨）</li>
+                            <li>転出元の引き止めポイントオファーを確認</li>
+                            <li>主要キャンペーンサイトをブックマーク</li>
+                            <li>価格.com、Twitter、YouTubeで最新CB情報を収集</li>
+                        </ul>
+                        <div class="pro-tip">
+                            <h4>プロの技：発行タイミングの最適化</h4>
+                            <p>月初1〜5日に発行すれば、15日間の中に「給料日後の週末」「月末駆け込み」の両方を含められる可能性が高い</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">2-3日目</div>
+                    <h4>エリア内の全店舗リストアップ</h4>
+                    <div class="timeline-content">
+                        <strong>やるべきこと：</strong>
+                        <ul>
+                            <li>Google Mapsで半径10km圏内の携帯ショップを全検索</li>
+                            <li>家電量販店（ヨドバシ、ビックカメラ等）の携帯コーナーも含める</li>
+                            <li>各店舗の営業時間、定休日を確認</li>
+                            <li>過去のCB実績を口コミサイトで調査</li>
+                            <li>最低10店舗はリストアップする</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">4-6日目</div>
+                    <h4>第1回店舗巡回＋条件ヒアリング</h4>
+                    <div class="timeline-content">
+                        <strong>やるべきこと：</strong>
+                        <ul>
+                            <li>リスト上位5店舗を訪問（契約はしない）</li>
+                            <li>「MNPを検討中。現在の最高条件は？」とストレートに聞く</li>
+                            <li>端末在庫、CB金額、必須オプションを確認</li>
+                            <li>名刺をもらい、担当者の名前をメモ</li>
+                            <li>「他店も見てから決めます」と正直に伝える</li>
+                        </ul>
+                        <div class="alert-box success">
+                            <div class="alert-title">重要テクニック</div>
+                            <p>この段階では絶対に契約しない。「他店の条件を教えてくれたら、ここで契約します」という交渉材料を残しておく</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">7-8日目</div>
+                    <h4>引き止めポイント交渉＋キャンペーン監視</h4>
+                    <div class="timeline-content">
+                        <strong>やるべきこと：</strong>
+                        <ul>
+                            <li>現キャリアのコールセンターに電話</li>
+                            <li>「MNPを真剣に考えている」と伝え、引き止めオファーを引き出す</li>
+                            <li>提示されたポイント額をメモ（通常5,000〜30,000ポイント）</li>
+                            <li>「検討します」と保留にして電話を切る（即決しない）</li>
+                            <li>主要キャリアの公式サイトで新キャンペーン開始をチェック</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">9-11日目</div>
+                    <h4>第2回店舗巡回＋条件交渉</h4>
+                    <div class="timeline-content">
+                        <strong>やるべきこと：</strong>
+                        <ul>
+                            <li>初回訪問時の上位3店舗を再訪問</li>
+                            <li>「他店では〇〇円のCBでした。それ以上出せますか？」と交渉</li>
+                            <li>端末在庫の最新状況を確認</li>
+                            <li>「残り4日で決めます」とプレッシャーをかける</li>
+                            <li>最高条件を出した店舗の名刺を保管</li>
+                        </ul>
+                        <div class="pro-tip">
+                            <h4>プロの技：複数店舗競合テクニック</h4>
+                            <p>「A店では5万円、B店では4.5万円と言われました。御社なら？」と具体的な金額を出すと、対抗心で上乗せしてくれることが多い</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">12-13日目</div>
+                    <h4>最終条件確認＋契約準備</h4>
+                    <div class="timeline-content">
+                        <strong>やるべきこと：</strong>
+                        <ul>
+                            <li>最高条件を出した店舗に電話で最終確認</li>
+                            <li>「明日契約します。在庫と条件の保証をお願いします」</li>
+                            <li>必要書類を全て準備（身分証、クレカ、MNP番号）</li>
+                            <li>契約当日のスケジュールを空けておく（所要時間2〜3時間）</li>
+                            <li>万が一のために第2候補店もキープ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">14日目</div>
+                    <h4>契約実行日（理想）</h4>
+                    <div class="timeline-content">
+                        <strong>やるべきこと：</strong>
+                        <ul>
+                            <li>開店直後に来店（待ち時間を短縮）</li>
+                            <li>事前に確認した条件を再度確認</li>
+                            <li>契約書の細かい文字まで全て読む</li>
+                            <li>CB受取方法と時期を必ず確認</li>
+                            <li>契約完了後、MNP予約番号は自動失効</li>
+                        </ul>
+                        <div class="alert-box danger">
+                            <div class="alert-title">最終日契約のリスク</div>
+                            <p>15日目（最終日）の契約は避けるべき。審査落ち、書類不備、システムエラーなどで契約できなかった場合、番号再発行が必要になり、交渉が振り出しに戻ります。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-day">15日目</div>
+                    <h4>予備日（何かあった時の保険）</h4>
+                    <div class="timeline-content">
+                        <strong>この日を使うケース：</strong>
+                        <ul>
+                            <li>14日目に体調不良で行けなかった</li>
+                            <li>希望端末の入荷が15日目になった</li>
+                            <li>さらに良い条件が最終日に出現した</li>
+                        </ul>
+                        <p><strong>注意：</strong>この日に契約する場合は、午前中早めの来店を推奨。夕方以降は回線切替が翌日になる可能性あり。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>🎯 発行タイミング別の最適戦略</h2>
+            
+            <h3>【パターン1】月初（1〜5日）発行</h3>
+            <div class="case-study">
+                <div class="case-title">メリット・デメリット分析</div>
+                <table class="comparison-table">
+                    <tr>
+                        <th style="width: 50%;">メリット</th>
+                        <th style="width: 50%;">デメリット</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul style="margin: 0;">
+                                <li>給料日後の週末（25日以降）を狙える</li>
+                                <li>月末駆け込みキャンペーンに間に合う</li>
+                                <li>2つの高額期間を1つの番号で狙撃可能</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="margin: 0;">
+                                <li>月初はキャンペーンが少ない傾向</li>
+                                <li>「まだ時間がある」と油断しがち</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="alert-box success" style="margin-top: 20px;">
+                    <div class="alert-title">推奨行動</div>
+                    <p>月初1〜6日は情報収集と店舗リストアップに専念。7〜10日で第1回巡回、11〜14日で交渉・契約。月末特需を逃さない。</p>
+                </div>
+            </div>
+
+            <h3>【パターン2】月中（10〜20日）発行</h3>
+            <div class="case-study">
+                <div class="case-title">メリット・デメリット分析</div>
+                <table class="comparison-table">
+                    <tr>
+                        <th style="width: 50%;">メリット</th>
+                        <th style="width: 50%;">デメリット</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul style="margin: 0;">
+                                <li>給料日（25日）前後のキャンペーンを狙える</li>
+                                <li>月末ラストスパート期間に突入できる</li>
+                                <li>比較的落ち着いて店舗巡回できる</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="margin: 0;">
+                                <li>月末に間に合わない可能性（20日発行だとギリギリ）</li>
+                                <li>次月の新キャンペーンを待てない</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="alert-box success" style="margin-top: 20px;">
+                    <div class="alert-title">推奨行動</div>
+                    <p>素早く行動。1〜3日で情報収集、4〜7日で第1回巡回、8〜12日で交渉・契約。月末を逃すと次回チャンスは1ヶ月後。</p>
+                </div>
+            </div>
+
+            <h3>【パターン3】月末（21〜31日）発行</h3>
+            <div class="case-study">
+                <div class="case-title">メリット・デメリット分析</div>
+                <table class="comparison-table">
+                    <tr>
+                        <th style="width: 50%;">メリット</th>
+                        <th style="width: 50%;">デメリット</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul style="margin: 0;">
+                                <li>月末特需の真っ只中で発行できる</li>
+                                <li>翌月の新キャンペーン開始を狙える</li>
+                                <li>2ヶ月分のキャンペーンを比較可能</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="margin: 0;">
+                                <li>店舗が激混みで待ち時間が長い</li>
+                                <li>人気端末が品切れリスク</li>
+                                <li>焦って条件交渉が甘くなりがち</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="alert-box success" style="margin-top: 20px;">
+                    <div class="alert-title">推奨行動</div>
+                    <p>超スピード勝負。発行当日から店舗巡回開始。3日以内に5店舗以上回り、5〜7日目で契約。混雑回避のため平日午前がベスト。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>💡 ギリギリ活用の上級テクニック</h2>
+            
+            <h3>テクニック1：二段階交渉法</h3>
+            <div class="strategy-card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                <h4>📈 CB金額を2倍に引き上げる交渉術</h4>
+                <div class="strategy-steps">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <strong>初回訪問（5〜7日目）</strong>：「検討中です」と伝え、条件だけ聞く（例：CB 3万円）
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <strong>他店で情報収集</strong>：同じ条件の店を3〜4店舗見つける
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <strong>再訪問（12〜13日目）</strong>：「他店では5万円でした。同じ条件なら今日契約します」
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <strong>店長判断を引き出す</strong>：「上司と相談させてください」→ 4.5万円に上積み
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <strong>最終押し</strong>：「端末ケースも付けてくれたら即決します」→ オプション追加獲得
+                    </div>
+                </div>
+            </div>
+
+            <h3>テクニック2：複数番号同時運用</h3>
+            <div class="pro-tip">
+                <h4>💎 超上級者向け：3回線同時MNP</h4>
+                <p><strong>手法：</strong>自分・配偶者・親の3回線で同時にMNP予約番号を発行し、15日間をズラして発行することで、45日間常に交渉可能な状態を維持</p>
+                <ul style="margin-top: 15px;">
+                    <li>1日目：自分の番号発行</li>
+                    <li>8日目：配偶者の番号発行（自分の番号残り8日）</li>
+                    <li>15日目：親の番号発行（配偶者残り8日）</li>
+                    <li>→ 常に「近日中に契約する人」として店舗から優遇される</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold;">⚠️ 注意：CIC信用情報に注意。1ヶ月に3件以上の契約は審査に影響する可能性あり</p>
+            </div>
+
+            <h3>テクニック3：キャンセル権の理解</h3>
+            <div class="alert-box info">
+                <div class="alert-title">初期契約解除制度を活用</div>
+                <p>契約書面受領日から8日以内なら、理由を問わず契約解除が可能（電気通信事業法）。つまり：</p>
+                <ul>
+                    <li>14日目に仮契約 → 8日間（22日目まで）は解除可能</li>
+                    <li>その間により良い条件が出たら解除して再契約</li>
+                    <li>解除時は端末返却＋事務手数料3,300円のみ負担</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: #dc3545;">※ 悪用厳禁。あくまで「契約内容が説明と異なった場合」の救済措置です</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📋 15日間チェックリスト</h2>
+            
+            <div class="checklist">
+                <h4>毎日チェック項目</h4>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>MNP予約番号の残り日数を確認（スマホのリマインダー設定推奨）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>主要キャンペーンサイトで新情報をチェック（価格.com、Twitter #MNP）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>訪問済み店舗からの連絡（SMS・メール）を確認</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>現在の最高条件をスプレッドシートに記録</label>
+                </div>
+            </div>
+
+            <div class="checklist">
+                <h4>契約前日の最終確認</h4>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>契約店舗に電話で条件・在庫を再確認</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>身分証明書の有効期限を確認（免許証・マイナンバーカード）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>クレジットカードの利用限度額を確認（端末代の枠があるか）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>MNP予約番号をスクショ＆メモ（受付時に必要）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>契約所要時間を確認し、当日のスケジュールを空ける（2〜3時間）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox">
+                    <label>CB受取方法・時期を書面で確認する準備</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>⚠️ よくある失敗例と対策</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>失敗パターン</th>
+                    <th>原因</th>
+                    <th>対策</th>
+                </tr>
+                <tr>
+                    <td>期限切れで番号失効</td>
+                    <td>15日目を16日目と勘違い</td>
+                    <td>発行日を「0日目」ではなく「1日目」と数える。カレンダーアプリに登録</td>
+                </tr>
+                <tr>
+                    <td>オンライン申込が期限不足で弾かれる</td>
+                    <td>「残り10日以上必要」を知らなかった</td>
+                    <td>オンラインは5日目までに申込。6日目以降は店舗契約に切り替え</td>
+                </tr>
+                <tr>
+                    <td>審査落ちで期限内に再挑戦できず</td>
+                    <td>14〜15日目に初契約を試みた</td>
+                    <td>初回契約は遅くとも12日目まで。審査落ち時の再挑戦時間を確保</td>
+                </tr>
+                <tr>
+                    <td>希望端末が全店で品切れ</td>
+                    <td>人気機種を月末に狙った</td>
+                    <td>在庫確認は5日目までに完了。取り置き交渉も視野に</td>
+                </tr>
+                <tr>
+                    <td>複数回線で同時契約し審査落ち</td>
+                    <td>CIC信用情報の短期多重申込</td>
+                    <td>家族回線は最低1週間空ける。1ヶ月に2回線まで</td>
+                </tr>
+            </table>
+
+            <div class="alert-box danger" style="margin-top: 30px;">
+                <div class="alert-title">絶対にやってはいけないこと</div>
+                <ul>
+                    <li>15日目の夕方以降に契約（回線切替が翌日になり番号失効）</li>
+                    <li>複数の予約番号を同時に持つ（混乱の元＆管理不可能）</li>
+                    <li>期限切れ直前に焦って条件の悪い店で契約</li>
+                    <li>「明日期限切れます」と店員に伝える（足元を見られる）</li>
+                    <li>番号を再発行して「リセット」する（交渉履歴が無駄になる）</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>🎓 まとめ：15日間活用の鉄則</h2>
+            
+            <div class="strategy-card" style="background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);">
+                <h4>🏆 MNP予約番号15日間を制する7つの鉄則</h4>
+                <div class="strategy-steps">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <strong>発行タイミングは月初1〜5日がベスト</strong>（給料日＋月末の両方を狙える）
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <strong>1〜3日目で徹底的な情報収集</strong>（店舗リスト、CB相場、キャンペーン）
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <strong>4〜6日目で第1回店舗巡回</strong>（最低5店舗、契約はしない）
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">4</span>
+                        <strong>7〜11日目で引き止め交渉＋第2回巡回</strong>（条件を詰める）
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">5</span>
+                        <strong>12〜13日目で最終条件確定</strong>（書面で確約を取る）
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">6</span>
+                        <strong>14日目に契約実行</strong>（15日目は予備日として確保）
+                    </div>
+                    <div class="step-item">
+                        <span class="step-number">7</span>
+                        <strong>毎日残り日数を確認</strong>（リマインダー必須、油断が最大の敵）
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box success" style="margin-top: 30px;">
+                <div class="alert-title">最後に</div>
+                <p>MNP予約番号の15日間は、単なる「契約期限」ではなく、<strong>最高条件を引き出すための貴重な交渉期間</strong>です。焦らず、計画的に、戦略的に使い倒しましょう。</p>
+                <p style="margin-top: 15px; font-weight: bold;">15日間をフル活用した人は、そうでない人より平均3〜5万円多くキャッシュバックを獲得しています。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>きいさん無料コンサル 特典19</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">本資料の情報は2025年1月時点のものです。MNP予約番号の有効期限は各キャリアで異なる場合があります。</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典25 SIMロック解除＆端末残債一括精算の最適タイミング診断チャート | きいさん無料コンサル</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .header-logo {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: 800;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2em;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid #FF6B6B;
+            font-weight: 800;
+        }
+        
+        h3 {
+            color: #FF6B6B;
+            font-size: 1.5em;
+            margin: 35px 0 25px 0;
+            padding-left: 20px;
+            border-left: 6px solid #FF6B6B;
+            font-weight: 700;
+        }
+        
+        h4 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 700;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .alert-box.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .alert-box.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .alert-title {
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-title::before {
+            content: "⚠️";
+            margin-right: 12px;
+            font-size: 1.3em;
+        }
+        
+        .alert-box.success .alert-title::before {
+            content: "✓";
+        }
+        
+        .alert-box.info .alert-title::before {
+            content: "ℹ️";
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .comparison-table td {
+            padding: 18px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+        
+        .flowchart {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 30px 0;
+            color: white;
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .flow-step {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid rgba(255,255,255,0.5);
+            position: relative;
+        }
+        
+        .flow-step::before {
+            content: "↓";
+            position: absolute;
+            left: 50%;
+            bottom: -25px;
+            font-size: 2em;
+            transform: translateX(-50%);
+        }
+        
+        .flow-step:last-child::before {
+            display: none;
+        }
+        
+        .calculator-box {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .calc-input {
+            margin-bottom: 20px;
+        }
+        
+        .calc-input label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .calc-input input,
+        .calc-input select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .calc-btn {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 700;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+        
+        .result-box {
+            background: white;
+            border: 3px solid #FF6B6B;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 25px;
+            display: none;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 35px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">🔓 きいさん無料コンサル特典</div>
+        <h1>📊 特典25<br>SIMロック解除＆端末残債一括精算の<br>最適タイミング診断チャート</h1>
+        <div class="header-subtitle">【2025年12月最新版】損しない！得する！完全ガイド</div>
+    </div>
+
+    <div class="container">
+        <div class="content-box">
+            <h2>🔐 2025年12月時点のSIMロック状況</h2>
+            
+            <div class="alert-box success">
+                <div class="alert-title">重要な変更点</div>
+                <p><strong>2021年10月1日以降に発売された端末は、原則SIMロックなしで販売</strong>されています。つまり：</p>
+                <ul>
+                    <li>iPhone 13以降：最初からSIMフリー</li>
+                    <li>2021年秋以降のAndroid端末：最初からSIMフリー</li>
+                    <li>SIMロック解除手続き不要</li>
+                </ul>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-title">SIMロック解除が必要な端末</div>
+                <ul>
+                    <li><strong>2021年9月30日以前に購入した端末</strong></li>
+                    <li>iPhone 12以前のモデル</li>
+                    <li>2021年夏以前のAndroid端末</li>
+                    <li>中古で購入した古い端末</li>
+                </ul>
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>購入時期</th>
+                    <th>SIMロック状況</th>
+                    <th>解除手続き</th>
+                </tr>
+                <tr>
+                    <td>2021年10月1日以降</td>
+                    <td class="status-success">最初からSIMフリー</td>
+                    <td>不要</td>
+                </tr>
+                <tr>
+                    <td>2021年9月30日以前</td>
+                    <td class="status-danger">SIMロックあり</td>
+                    <td>必要</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-box">
+            <h2>🎯 SIMロック解除のベストタイミング</h2>
+            
+            <div class="flowchart">
+                <h4 style="color: white; margin-bottom: 20px; text-align: center;">📋 最適タイミング診断フローチャート</h4>
+                
+                <div class="flow-step">
+                    <strong>Q1：端末の購入時期は？</strong><br>
+                    ・2021年10月以降 → SIMロック解除不要！<br>
+                    ・2021年9月以前 → 次へ
+                </div>
+                
+                <div class="flow-step">
+                    <strong>Q2：端末代金は完済している？</strong><br>
+                    ・完済済み → いつでも解除OK（今すぐ推奨）<br>
+                    ・分割払い中 → 次へ
+                </div>
+                
+                <div class="flow-step">
+                    <strong>Q3：購入から100日経過している？</strong><br>
+                    ・100日以上経過 → 今すぐ解除可能<br>
+                    ・100日未満 → 100日経過を待つ
+                </div>
+                
+                <div class="flow-step">
+                    <strong>Q4：MNPの予定は？</strong><br>
+                    ・予定あり → MNP前に必ず解除<br>
+                    ・予定なし → とりあえず解除しておく（無料）
+                </div>
+                
+                <div class="flow-step" style="background: rgba(255,255,255,0.3); font-size: 1.2em; font-weight: 700; text-align: center;">
+                    ✅ 結論：迷ったら今すぐ解除！<br>デメリットなし、メリット多数！
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>💰 端末残債一括精算のタイミング診断</h2>
+            
+            <div class="calculator-box">
+                <h4>🧮 一括精算シミュレーター</h4>
+                <p style="margin-bottom: 20px; color: #666;">あなたのケースで一括精算すべきか診断します</p>
+                
+                <div class="calc-input">
+                    <label>端末の残債額（円）</label>
+                    <input type="number" id="zanhai" placeholder="例：50000" value="50000">
+                </div>
+                
+                <div class="calc-input">
+                    <label>月額割引額（円）</label>
+                    <input type="number" id="waribiki" placeholder="例：2000" value="2000">
+                </div>
+                
+                <div class="calc-input">
+                    <label>残りの分割回数（ヶ月）</label>
+                    <input type="number" id="months" placeholder="例：12" value="12">
+                </div>
+                
+                <div class="calc-input">
+                    <label>MNP予定時期</label>
+                    <select id="mnpTiming">
+                        <option value="now">今すぐ</option>
+                        <option value="3months">3ヶ月後</option>
+                        <option value="6months">6ヶ月後</option>
+                        <option value="12months">12ヶ月後</option>
+                        <option value="none">予定なし</option>
+                    </select>
+                </div>
+                
+                <button class="calc-btn" onclick="calculatePayoff()">📊 診断する</button>
+                
+                <div class="result-box" id="resultBox">
+                    <h4 style="margin-bottom: 20px; color: #2c3e50;">診断結果</h4>
+                    <div id="recommendation"></div>
+                </div>
+            </div>
+
+            <script>
+                function calculatePayoff() {
+                    const zanhai = parseInt(document.getElementById('zanhai').value) || 0;
+                    const waribiki = parseInt(document.getElementById('waribiki').value) || 0;
+                    const months = parseInt(document.getElementById('months').value) || 0;
+                    const mnpTiming = document.getElementById('mnpTiming').value;
+                    
+                    const totalWaribiki = waribiki * months;
+                    const jissaiZanhai = zanhai - totalWaribiki;
+                    
+                    let recommendation = '';
+                    let bgColor = '';
+                    
+                    if (mnpTiming === 'now') {
+                        if (jissaiZanhai > 0) {
+                            recommendation = `
+                                <div style="background: #f8d7da; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                                    <strong style="color: #dc3545; font-size: 1.2em;">⚠️ 今すぐMNPは損失が大きい！</strong>
+                                </div>
+                                <p><strong>残債：</strong>${zanhai.toLocaleString()}円</p>
+                                <p><strong>今後の月額割引総額：</strong>${totalWaribiki.toLocaleString()}円</p>
+                                <p><strong>実質負担額：</strong><span style="color: #dc3545; font-size: 1.3em; font-weight: 700;">${jissaiZanhai.toLocaleString()}円</span></p>
+                                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                                    <strong>💡 推奨：</strong>最低でも${Math.ceil(months/2)}ヶ月待ってからMNP。その間に月額割引${(waribiki * Math.ceil(months/2)).toLocaleString()}円を受け取れます。
+                                </div>
+                            `;
+                        } else {
+                            recommendation = `
+                                <div style="background: #d4edda; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                                    <strong style="color: #28a745; font-size: 1.2em;">✅ 一括精算してもOK！</strong>
+                                </div>
+                                <p>残債は既に月額割引で相殺されています。今すぐMNPしても損失はありません。</p>
+                            `;
+                        }
+                    } else if (mnpTiming === 'none') {
+                        recommendation = `
+                            <div style="background: #d1ecf1; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                                <strong style="color: #17a2b8; font-size: 1.2em;">ℹ️ 一括精算不要</strong>
+                            </div>
+                            <p>MNP予定がないなら、そのまま分割払いを続けるのが最もお得です。</p>
+                            <p><strong>今後${months}ヶ月で受け取れる割引：</strong>${totalWaribiki.toLocaleString()}円</p>
+                        `;
+                    } else {
+                        let waitMonths = mnpTiming === '3months' ? 3 : mnpTiming === '6months' ? 6 : 12;
+                        let futureWaribiki = waribiki * waitMonths;
+                        let futureZanhai = zanhai - futureWaribiki;
+                        
+                        recommendation = `
+                            <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                                <strong style="color: #856404; font-size: 1.2em;">⏰ 計画的にMNPしましょう</strong>
+                            </div>
+                            <p><strong>現在の残債：</strong>${zanhai.toLocaleString()}円</p>
+                            <p><strong>${waitMonths}ヶ月後の残債：</strong>${Math.max(0, futureZanhai).toLocaleString()}円</p>
+                            <p><strong>${waitMonths}ヶ月間で受け取れる割引：</strong>${futureWaribiki.toLocaleString()}円</p>
+                            <div style="background: #d4edda; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                                <strong>💡 推奨：</strong>${waitMonths}ヶ月待ってからMNPすることで、${futureWaribiki.toLocaleString()}円お得になります！
+                            </div>
+                        `;
+                    }
+                    
+                    document.getElementById('recommendation').innerHTML = recommendation;
+                    document.getElementById('resultBox').style.display = 'block';
+                    document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            </script>
+        </div>
+
+        <div class="content-box">
+            <h2>📋 キャリア別SIMロック解除方法（2025年12月版）</h2>
+            
+            <h3>docomo</h3>
+            <div class="alert-box info">
+                <h4>オンライン（無料・24時間対応）</h4>
+                <ol>
+                    <li>My docomoにログイン</li>
+                    <li>「その他お手続き」→「SIMロック解除」</li>
+                    <li>IMEI番号を入力（設定→一般→情報で確認）</li>
+                    <li>解除完了（即時）</li>
+                </ol>
+                <p style="margin-top: 15px;"><strong>条件：</strong>購入から100日経過 または 残債完済</p>
+            </div>
+
+            <h3>au</h3>
+            <div class="alert-box info">
+                <h4>オンライン（無料・24時間対応）</h4>
+                <ol>
+                    <li>My auにログイン</li>
+                    <li>「契約内容確認・変更」→「SIMロック解除」</li>
+                    <li>IMEI番号を入力</li>
+                    <li>解除完了（即時）</li>
+                </ol>
+                <p style="margin-top: 15px;"><strong>条件：</strong>購入から101日経過 または 残債完済</p>
+            </div>
+
+            <h3>Softbank</h3>
+            <div class="alert-box info">
+                <h4>オンライン（無料・24時間対応）</h4>
+                <ol>
+                    <li>My Softbankにログイン</li>
+                    <li>「メニュー」→「契約・オプション管理」</li>
+                    <li>「SIMロック解除手続き」</li>
+                    <li>IMEI番号を入力</li>
+                    <li>解除完了（即時）</li>
+                </ol>
+                <p style="margin-top: 15px;"><strong>条件：</strong>購入から101日経過 または 残債完済</p>
+            </div>
+
+            <div class="alert-box danger">
+                <div class="alert-title">店舗でのSIMロック解除は有料</div>
+                <ul>
+                    <li>docomo：3,300円</li>
+                    <li>au：3,300円</li>
+                    <li>Softbank：3,300円</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 700;">必ずオンラインで手続きしましょう（無料）！</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>⚠️ よくある失敗例と対策</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>失敗例</th>
+                    <th>損失額</th>
+                    <th>対策</th>
+                </tr>
+                <tr>
+                    <td>SIMロック解除せずにMNP</td>
+                    <td>端末が使えず買い直し<br>10万円〜</td>
+                    <td>MNP前に必ず解除</td>
+                </tr>
+                <tr>
+                    <td>店舗でSIMロック解除</td>
+                    <td>手数料 3,300円</td>
+                    <td>オンラインで無料解除</td>
+                </tr>
+                <tr>
+                    <td>残債あるのに一括精算</td>
+                    <td>月額割引を放棄<br>5万円〜</td>
+                    <td>月額割引を受け切ってから</td>
+                </tr>
+                <tr>
+                    <td>100日経たずに解除申請</td>
+                    <td>解除拒否</td>
+                    <td>101日目以降に申請</td>
+                </tr>
+                <tr>
+                    <td>IMEI番号を間違える</td>
+                    <td>解除失敗</td>
+                    <td>設定画面から正確にコピー</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-box">
+            <h2>📝 まとめ：SIMロック解除＆残債精算の鉄則</h2>
+            
+            <div class="alert-box success">
+                <div class="alert-title">5つの鉄則</div>
+                <ol>
+                    <li><strong>2021年10月以降の端末はSIMロック解除不要</strong>（最初からSIMフリー）</li>
+                    <li><strong>それ以前の端末は今すぐ解除</strong>（無料、デメリットなし）</li>
+                    <li><strong>必ずオンラインで解除</strong>（店舗は3,300円かかる）</li>
+                    <li><strong>残債の一括精算は基本NG</strong>（月額割引を放棄することに）</li>
+                    <li><strong>MNP前には必ずSIMロック解除完了を確認</strong></li>
+                </ol>
+            </div>
+
+            <div class="alert-box info" style="margin-top: 30px;">
+                <div class="alert-title">最後に</div>
+                <p>SIMロック解除は<strong>「やっておいて損はない」</strong>手続きです。MNPの予定がなくても、今すぐ解除しておきましょう。</p>
+                <p style="margin-top: 15px; font-weight: 700;">迷ったら解除！これが正解です。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>きいさん無料コンサル 特典25</p>
+        <p style="margin-top: 15px; font-size: 0.95em;">※ 本情報は2025年12月時点のものです。最新情報は各キャリアの公式サイトでご確認ください。</p>
+    </div>
+</body>
+</html>

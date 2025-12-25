@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典18 iPhone実質1円の罠を見破る！本当の総額計算シミュレーター | きいさん無料コンサル</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .header-logo {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: 800;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2em;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        h3 {
+            color: #e74c3c;
+            font-size: 1.4em;
+            margin: 30px 0 20px 0;
+            padding-left: 15px;
+            border-left: 5px solid #e74c3c;
+        }
+        
+        h4 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin: 25px 0 15px 0;
+            font-weight: bold;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .alert-box.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .alert-box.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .alert-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-title::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .alert-box.success .alert-title::before {
+            content: "✓";
+        }
+        
+        .alert-box.info .alert-title::before {
+            content: "ℹ️";
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+        
+        .price-highlight {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .calculator-box {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .input-group select,
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .calculate-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .calculate-btn:hover {
+            background: #c0392b;
+        }
+        
+        .result-box {
+            background: white;
+            border: 3px solid #e74c3c;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 25px;
+            display: none;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .result-item:last-child {
+            border-bottom: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 15px;
+            padding-top: 20px;
+            border-top: 2px solid #e74c3c;
+        }
+        
+        .trap-list {
+            background: #fff3cd;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .trap-item {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .trap-item::before {
+            content: "🚨";
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .trap-item strong {
+            color: #dc3545;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .checklist {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .checklist-item {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checklist-item input {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .case-study {
+            background: #e9ecef;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .case-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .case-title::before {
+            content: "📊";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .content-box {
+                padding: 25px 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+            
+            .comparison-table {
+                font-size: 0.9em;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">💎 きいさん無料コンサル特典</div>
+        <h1>📱 特典18<br>iPhone実質1円の罠を見破る！<br>本当の総額計算シミュレーター</h1>
+        <div class="header-subtitle">広告の「実質1円」に騙されるな！真の負担額を徹底解明</div>
+    </div>
+
+    <div class="container">
+        <div class="content-box">
+            <h2>📱 「実質1円」の正体を暴く</h2>
+            
+            <div class="alert-box danger">
+                <div class="alert-title">衝撃の事実</div>
+                <p>「iPhone実質1円」と宣伝されている案件の<strong>実際の2年間総負担額は平均12万円〜18万円</strong>です。「実質」という言葉に隠された仕組みを完全解明します。</p>
+            </div>
+
+            <h3>「実質1円」の3つのカラクリ</h3>
+            
+            <div class="trap-list">
+                <div class="trap-item">
+                    <strong>罠1：端末割引と月額割引の混同</strong>
+                    <p>「実質1円」は端末代金が1円という意味ではありません。24ヶ月間の月額割引と相殺して「実質的に」1円になるという意味です。途中解約すると割引が消滅し、残債が一括請求されます。</p>
+                </div>
+                
+                <div class="trap-item">
+                    <strong>罠2：必須加入オプションの存在</strong>
+                    <p>「実質1円」を適用するには、月額550円〜1,100円のオプションに加入が必須条件となっているケースが多数。2年間で13,200円〜26,400円の追加負担が発生します。</p>
+                </div>
+                
+                <div class="trap-item">
+                    <strong>罠3：高額プラン縛り</strong>
+                    <p>最安プランでは「実質1円」が適用されず、月額7,000円以上の大容量プランへの加入が条件。本来なら月額3,000円で済むのに、差額4,000円×24ヶ月=96,000円の超過負担が発生します。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>💰 真の総額計算シミュレーター</h2>
+            
+            <div class="calculator-box">
+                <h4>あなたのケースで本当の負担額を計算</h4>
+                
+                <div class="input-group">
+                    <label>機種を選択</label>
+                    <select id="device">
+                        <option value="129800">iPhone 15 128GB (定価129,800円)</option>
+                        <option value="144800">iPhone 15 256GB (定価144,800円)</option>
+                        <option value="119800">iPhone 14 128GB (定価119,800円)</option>
+                        <option value="108900">iPhone SE 第3世代 64GB (定価108,900円)</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>表示されている「実質価格」</label>
+                    <select id="advertised">
+                        <option value="1">実質1円</option>
+                        <option value="12800">実質12,800円</option>
+                        <option value="24800">実質24,800円</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>月額プラン料金</label>
+                    <select id="plan">
+                        <option value="7315">無制限プラン 7,315円</option>
+                        <option value="5665">50GBプラン 5,665円</option>
+                        <option value="4015">20GBプラン 4,015円</option>
+                        <option value="2178">3GBプラン 2,178円</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>必須オプション月額</label>
+                    <select id="option">
+                        <option value="0">なし</option>
+                        <option value="550">550円</option>
+                        <option value="880">880円</option>
+                        <option value="1100">1,100円</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>利用予定期間</label>
+                    <select id="period">
+                        <option value="24">24ヶ月（2年）</option>
+                        <option value="12">12ヶ月（1年）</option>
+                        <option value="6">6ヶ月</option>
+                        <option value="3">3ヶ月</option>
+                    </select>
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateTotal()">本当の総額を計算する</button>
+                
+                <div class="result-box" id="resultBox">
+                    <h4 style="margin-bottom: 20px; color: #2c3e50;">💡 計算結果</h4>
+                    <div class="result-item">
+                        <span>端末代金（分割総額）</span>
+                        <span id="devicePrice">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>月額プラン料金</span>
+                        <span id="planTotal">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>オプション料金</span>
+                        <span id="optionTotal">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>月額割引（-）</span>
+                        <span id="discount" style="color: #28a745;">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>早期解約時の残債</span>
+                        <span id="penalty" style="color: #dc3545;">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>🔴 実際の総負担額</span>
+                        <span id="totalCost">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function calculateTotal() {
+                    const devicePrice = parseInt(document.getElementById('device').value);
+                    const advertised = parseInt(document.getElementById('advertised').value);
+                    const planPrice = parseInt(document.getElementById('plan').value);
+                    const optionPrice = parseInt(document.getElementById('option').value);
+                    const period = parseInt(document.getElementById('period').value);
+                    
+                    // 月額割引額を計算（実質価格から逆算）
+                    const monthlyDiscount = Math.floor((devicePrice - advertised) / 24);
+                    
+                    // 各項目の計算
+                    const deviceTotal = devicePrice;
+                    const planTotal = planPrice * period;
+                    const optionTotal = optionPrice * period;
+                    const discountTotal = monthlyDiscount * period;
+                    
+                    // 早期解約時の残債
+                    const remainingMonths = 24 - period;
+                    const penalty = remainingMonths > 0 ? (devicePrice - advertised) - discountTotal : 0;
+                    
+                    // 総負担額
+                    const totalCost = deviceTotal + planTotal + optionTotal - discountTotal;
+                    
+                    // 結果表示
+                    document.getElementById('devicePrice').textContent = deviceTotal.toLocaleString() + '円';
+                    document.getElementById('planTotal').textContent = planTotal.toLocaleString() + '円';
+                    document.getElementById('optionTotal').textContent = optionTotal.toLocaleString() + '円';
+                    document.getElementById('discount').textContent = '-' + discountTotal.toLocaleString() + '円';
+                    document.getElementById('penalty').textContent = penalty > 0 ? penalty.toLocaleString() + '円' : '0円';
+                    document.getElementById('totalCost').textContent = totalCost.toLocaleString() + '円';
+                    
+                    document.getElementById('resultBox').style.display = 'block';
+                }
+            </script>
+        </div>
+
+        <div class="content-box">
+            <h2>📊 実例比較：広告 vs 実際</h2>
+            
+            <div class="case-study">
+                <div class="case-title">ケーススタディ1：ドコモ「iPhone 15 実質1円」</div>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>項目</th>
+                        <th>広告の表示</th>
+                        <th>実際の負担</th>
+                    </tr>
+                    <tr>
+                        <td>端末代金</td>
+                        <td><span class="price-highlight">実質1円</span></td>
+                        <td>定価129,800円（分割）</td>
+                    </tr>
+                    <tr>
+                        <td>月額プラン</td>
+                        <td>eximo 7,315円</td>
+                        <td>7,315円×24ヶ月=<strong>175,560円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>必須オプション</td>
+                        <td>※小さく記載</td>
+                        <td>880円×24ヶ月=<strong>21,120円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>月額割引</td>
+                        <td>-</td>
+                        <td>-5,408円×24ヶ月=<strong>-129,792円</strong></td>
+                    </tr>
+                    <tr style="background: #fff3cd; font-weight: bold;">
+                        <td>2年間総額</td>
+                        <td>実質1円！</td>
+                        <td class="price-highlight">196,688円</td>
+                    </tr>
+                </table>
+                
+                <div class="alert-box info">
+                    <div class="alert-title">比較：格安SIMで同じiPhoneを使った場合</div>
+                    <ul>
+                        <li>Apple Storeで端末購入：129,800円</li>
+                        <li>格安SIM（20GB）：2,970円×24ヶ月=71,280円</li>
+                        <li><strong>2年間総額：201,080円</strong></li>
+                        <li>💡 差額はわずか4,392円。しかも解約自由で端末は完全に自分のもの</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-title">ケーススタディ2：au「iPhone 14 実質12,800円」</div>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>項目</th>
+                        <th>広告の表示</th>
+                        <th>実際の負担</th>
+                    </tr>
+                    <tr>
+                        <td>端末代金</td>
+                        <td><span class="price-highlight">実質12,800円</span></td>
+                        <td>定価119,800円（分割）</td>
+                    </tr>
+                    <tr>
+                        <td>月額プラン</td>
+                        <td>使い放題MAX 7,238円</td>
+                        <td>7,238円×24ヶ月=<strong>173,712円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>スマホトクするプログラム</td>
+                        <td>2年後返却でお得</td>
+                        <td>返却しないと残債<strong>59,900円</strong>請求</td>
+                    </tr>
+                    <tr>
+                        <td>必須オプション</td>
+                        <td>故障紛失サポート</td>
+                        <td>726円×24ヶ月=<strong>17,424円</strong></td>
+                    </tr>
+                    <tr style="background: #fff3cd; font-weight: bold;">
+                        <td>2年間総額（返却時）</td>
+                        <td>実質12,800円！</td>
+                        <td class="price-highlight">203,936円</td>
+                    </tr>
+                </table>
+                
+                <div class="alert-box danger">
+                    <div class="alert-title">返却プログラムの落とし穴</div>
+                    <ul>
+                        <li>2年後、端末を返却しないと残債59,900円が一括請求</li>
+                        <li>返却時に画面割れや傷があると最大22,000円の追加料金</li>
+                        <li>結局端末は自分のものにならず、2年間「レンタル」していただけ</li>
+                        <li>返却せず買い取る場合の実質総額：<strong>263,836円</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>🔍 契約前の必須チェックリスト</h2>
+            
+            <div class="checklist">
+                <h4>以下の15項目を全て確認してから契約してください</h4>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1"><strong>端末の定価</strong>を確認（Apple公式サイトと比較）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2"><strong>24ヶ月分の月額割引総額</strong>を計算（実質価格との差額）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3"><strong>必須オプションの有無</strong>と月額料金を確認</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check4">
+                    <label for="check4"><strong>オプションの最低加入期間</strong>を確認（いつ外せるか）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check5">
+                    <label for="check5"><strong>適用される月額プラン</strong>の容量と料金を確認</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check6">
+                    <label for="check6"><strong>プラン変更の可否</strong>と時期を確認（割引継続条件）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check7">
+                    <label for="check7"><strong>返却プログラムの有無</strong>を確認（端末が自分のものになるか）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check8">
+                    <label for="check8"><strong>返却時の条件</strong>を確認（傷・故障時の追加料金）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check9">
+                    <label for="check9"><strong>早期解約時のペナルティ</strong>を確認（残債一括請求額）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check10">
+                    <label for="check10"><strong>2年間の総支払額</strong>を自分で計算</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check11">
+                    <label for="check11"><strong>格安SIM+Apple直販</strong>との価格差を比較</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check12">
+                    <label for="check12"><strong>契約書の細かい文字</strong>まで全て読む</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check13">
+                    <label for="check13"><strong>店員の説明と契約書</strong>の内容が一致しているか確認</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check14">
+                    <label for="check14"><strong>自分のデータ使用量</strong>を確認（過剰プランになっていないか）</label>
+                </div>
+                
+                <div class="checklist-item">
+                    <input type="checkbox" id="check15">
+                    <label for="check15"><strong>キャンペーン適用条件</strong>を全て満たしているか確認</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>💡 本当にお得な購入方法</h2>
+            
+            <h3>【推奨】賢いiPhone購入戦略</h3>
+            
+            <div class="alert-box success">
+                <div class="alert-title">最もコスパが良い方法</div>
+                <ol>
+                    <li><strong>Apple公式で整備済製品を購入</strong>（最大15%オフ、保証付き）</li>
+                    <li><strong>格安SIMで運用</strong>（月額1,000円〜3,000円）</li>
+                    <li><strong>端末は完全に自分のもの</strong>（いつでも売却・機種変更可能）</li>
+                </ol>
+                <p style="margin-top: 15px;">💰 <strong>2年間総額例</strong>：整備済iPhone 14（102,800円）+ LINEMO 3GB（990円×24=23,760円）= <strong>126,560円</strong></p>
+            </div>
+
+            <h3>「実質1円」が本当にお得なケース</h3>
+            
+            <ol>
+                <li><strong>大容量データを確実に使う人</strong>
+                    <ul>
+                        <li>月間50GB以上使う（動画視聴、テザリング多用）</li>
+                        <li>元々キャリアの無制限プランを契約する予定だった</li>
+                    </ul>
+                </li>
+                
+                <li><strong>24ヶ月間確実に使い続ける人</strong>
+                    <ul>
+                        <li>転勤・引っ越しの予定がない</li>
+                        <li>端末故障のリスクが低い（保護ケース使用、慎重に扱う）</li>
+                    </ul>
+                </li>
+                
+                <li><strong>返却プログラムを活用できる人</strong>
+                    <ul>
+                        <li>2年ごとに最新機種に変えたい</li>
+                        <li>端末を丁寧に扱える（傷・汚れをつけない自信がある）</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="alert-box">
+                <div class="alert-title">結論</div>
+                <p>上記3つの条件を<strong>全て満たす場合のみ</strong>、「実質1円」は検討の価値があります。1つでも当てはまらない場合は、Apple直販+格安SIMの方が総額で安く、自由度も高くなります。</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>🚨 悪質な販売手法の見分け方</h2>
+            
+            <h3>こんな説明をする店員には要注意</h3>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>悪質な説明</th>
+                    <th>真実</th>
+                </tr>
+                <tr>
+                    <td>「実質1円なので、ほぼタダでiPhoneが手に入ります！」</td>
+                    <td>2年間で15万円以上支払います。「タダ」ではありません。</td>
+                </tr>
+                <tr>
+                    <td>「オプションは後で外せるので、とりあえず加入してください」</td>
+                    <td>外すと割引が消滅する場合があります。契約書で確認必須。</td>
+                </tr>
+                <tr>
+                    <td>「このプランが一番お得です」</td>
+                    <td>あなたのデータ使用量に合っているか不明。必ず比較を。</td>
+                </tr>
+                <tr>
+                    <td>「今日中に契約しないとこの価格は終わります」</td>
+                    <td>焦らせて契約させる手法。同じキャンペーンは継続されます。</td>
+                </tr>
+                <tr>
+                    <td>「返却すれば実質負担はありません」</td>
+                    <td>2年間のプラン料金は返却しても返ってきません。</td>
+                </tr>
+            </table>
+
+            <h3>契約を避けるべき店舗の特徴</h3>
+            
+            <ul>
+                <li>総額を計算させてくれない（「計算は複雑なので」と濁す）</li>
+                <li>契約書をじっくり読む時間を与えない（急かす）</li>
+                <li>解約条件や違約金の説明を省略する</li>
+                <li>「実質」の意味を詳しく説明しない</li>
+                <li>格安SIMとの比較を嫌がる</li>
+                <li>Apple公式価格との比較を嫌がる</li>
+            </ul>
+
+            <div class="alert-box danger">
+                <div class="alert-title">即座に契約を中断すべきケース</div>
+                <ul>
+                    <li>「今日中に決めないと」と急かされる</li>
+                    <li>質問に対して明確に答えてくれない</li>
+                    <li>契約書の説明を省略する</li>
+                    <li>「みんなこれで契約してます」と同調圧力をかける</li>
+                    <li>総額計算を拒否する</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold;">一度店を出て、冷静に比較検討してから決めましょう。本当にお得なら、明日も同じ条件で契約できます。</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📝 まとめ：賢くiPhoneを手に入れる5つの鉄則</h2>
+            
+            <div class="alert-box info">
+                <h4 style="margin-bottom: 15px;">鉄則1：「実質」の意味を正しく理解する</h4>
+                <p>「実質1円」は端末代が1円という意味ではありません。24ヶ月間の月額割引で相殺して「実質的に1円の負担」という意味。途中解約すると割引が消え、残債が一括請求されます。</p>
+            </div>
+
+            <div class="alert-box info">
+                <h4 style="margin-bottom: 15px;">鉄則2：必ず総額を自分で計算する</h4>
+                <p>端末代 + (月額料金×24) + (オプション×24) - (月額割引×24) = 真の総額。この計算をせずに契約してはいけません。</p>
+            </div>
+
+            <div class="alert-box info">
+                <h4 style="margin-bottom: 15px;">鉄則3：Apple公式+格安SIMと必ず比較する</h4>
+                <p>多くの場合、Apple Storeで端末を購入し、格安SIMで運用する方が総額で安く、自由度も高くなります。必ず比較してから決めましょう。</p>
+            </div>
+
+            <div class="alert-box info">
+                <h4 style="margin-bottom: 15px;">鉄則4：返却プログラムのリスクを理解する</h4>
+                <p>2年後に返却すれば安くなりますが、端末は自分のものになりません。傷や故障があると追加料金が発生します。レンタルと同じです。</p>
+            </div>
+
+            <div class="alert-box info">
+                <h4 style="margin-bottom: 15px;">鉄則5：焦って契約しない</h4>
+                <p>「今日だけ」「在庫限り」と言われても、一度持ち帰って検討しましょう。本当にお得なら、明日も同じ条件で契約できます。焦らせるのは販売テクニックです。</p>
+            </div>
+
+            <div class="alert-box success" style="margin-top: 30px;">
+                <div class="alert-title">最後に</div>
+                <p>「実質1円」は決して詐欺ではありませんが、広告表現と実態に大きなギャップがあるのも事実です。このシミュレーターで計算し、本当に自分にとってお得かを見極めてから契約しましょう。</p>
+                <p style="margin-top: 10px; font-weight: bold;">知識と計算が、あなたの財布を守ります。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>きいさん無料コンサル 特典18</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">本資料の情報は2025年1月時点のものです。最新の情報は各キャリアの公式サイトでご確認ください。</p>
+    </div>
+</body>
+</html>

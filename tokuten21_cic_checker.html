@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典21 ブラックリスト判定セルフチェック！CICスコア改善3ヶ月プログラム | きいさん無料コンサル</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .header-logo {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: 800;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2em;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid #fc466b;
+            font-weight: 800;
+        }
+        
+        h3 {
+            color: #fc466b;
+            font-size: 1.5em;
+            margin: 35px 0 25px 0;
+            padding-left: 20px;
+            border-left: 6px solid #fc466b;
+            font-weight: 700;
+        }
+        
+        h4 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 700;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .alert-box.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .alert-box.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .alert-title {
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-title::before {
+            content: "⚠️";
+            margin-right: 12px;
+            font-size: 1.3em;
+        }
+        
+        .alert-box.success .alert-title::before {
+            content: "✓";
+        }
+        
+        .alert-box.info .alert-title::before {
+            content: "ℹ️";
+        }
+        
+        .checker-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 30px 0;
+            color: white;
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .checker-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .check-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid rgba(255,255,255,0.5);
+        }
+        
+        .check-question {
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .check-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .check-btn {
+            flex: 1;
+            padding: 12px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .check-btn:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: white;
+        }
+        
+        .check-btn.selected {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+        
+        .result-box {
+            background: white;
+            color: #2c3e50;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 25px;
+            display: none;
+        }
+        
+        .score-display {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            color: white;
+            margin: 30px 0;
+        }
+        
+        .score-number {
+            font-size: 4em;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+        
+        .score-label {
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .improvement-plan {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .week-plan {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #fc466b;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .week-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #fc466b;
+            margin-bottom: 15px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .comparison-table td {
+            padding: 18px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+        
+        .status-good {
+            color: #28a745;
+            font-weight: 700;
+        }
+        
+        .status-warning {
+            color: #ffc107;
+            font-weight: 700;
+        }
+        
+        .status-danger {
+            color: #dc3545;
+            font-weight: 700;
+        }
+        
+        .cic-card {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 6px 25px rgba(17, 153, 142, 0.3);
+        }
+        
+        .cic-card h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 35px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content-box {
+                padding: 25px 20px;
+            }
+            
+            .check-options {
+                flex-direction: column;
+            }
+            
+            .score-number {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">🔍 きいさん無料コンサル特典</div>
+        <h1>⚖️ 特典21<br>ブラックリスト判定セルフチェック！<br>CICスコア改善3ヶ月プログラム</h1>
+        <div class="header-subtitle">審査落ちの原因を特定し、確実に信用情報を回復させる完全ガイド</div>
+    </div>
+
+    <div class="container">
+        <div class="content-box">
+            <h2>🎯 あなたは大丈夫？MNP審査落ちの真相</h2>
+            
+            <div class="alert-box danger">
+                <div class="alert-title">衝撃の事実</div>
+                <p>MNPで審査落ちする人の<strong>78%は自分がブラックリストに近い状態だと気づいていません</strong>。「なぜ落ちた？」と思う前に、このセルフチェックで現状を把握しましょう。</p>
+            </div>
+
+            <h3>ブラックリストとは何か？</h3>
+            
+            <div class="cic-card">
+                <h4>📋 信用情報機関（CIC）の仕組み</h4>
+                <p>日本には3つの信用情報機関があり、携帯電話の契約審査では主に<strong>CIC（株式会社シー・アイ・シー）</strong>の情報が参照されます。</p>
+                <ul style="margin-top: 15px; color: white;">
+                    <li>クレジットカードの支払い履歴</li>
+                    <li>携帯電話の分割払い状況</li>
+                    <li>各種ローンの返済状況</li>
+                    <li>過去の延滞・滞納記録</li>
+                    <li>短期間の多重申込み履歴</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 700;">これらの情報が「スコア」として評価され、審査の可否が決まります。</p>
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>信用状態</th>
+                    <th>CICスコア目安</th>
+                    <th>審査通過率</th>
+                    <th>対策期間</th>
+                </tr>
+                <tr>
+                    <td class="status-good">✅ ホワイト（優良）</td>
+                    <td>700点以上</td>
+                    <td>95%以上</td>
+                    <td>対策不要</td>
+                </tr>
+                <tr>
+                    <td class="status-warning">⚠️ イエロー（注意）</td>
+                    <td>600〜699点</td>
+                    <td>70〜90%</td>
+                    <td>1ヶ月</td>
+                </tr>
+                <tr>
+                    <td class="status-danger">🚨 グレー（危険）</td>
+                    <td>500〜599点</td>
+                    <td>40〜65%</td>
+                    <td>3ヶ月</td>
+                </tr>
+                <tr>
+                    <td class="status-danger">❌ ブラック</td>
+                    <td>500点未満</td>
+                    <td>10%以下</td>
+                    <td>6ヶ月〜5年</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-box">
+            <h2>📝 3分で完了！ブラックリスト判定セルフチェック</h2>
+            
+            <div class="checker-box">
+                <div class="checker-title">🔍 あなたの信用状態を診断</div>
+                
+                <div class="check-item">
+                    <div class="check-question">Q1. 過去2年以内にクレジットカードや携帯料金の支払いを延滞したことはありますか？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(1, 0)">一度もない (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(1, 10)">1〜2回ある (10点)</button>
+                        <button class="check-btn" onclick="selectAnswer(1, 30)">3回以上ある (30点)</button>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-question">Q2. 現在、61日以上の延滞や未払いがありますか？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(2, 0)">ない (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(2, 50)">ある (50点)</button>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-question">Q3. 過去6ヶ月以内に携帯電話やクレジットカードの申込みを何回しましたか？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(3, 0)">0〜1回 (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(3, 15)">2〜3回 (15点)</button>
+                        <button class="check-btn" onclick="selectAnswer(3, 35)">4回以上 (35点)</button>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-question">Q4. 現在、携帯電話の分割払いや各種ローンの残高はいくらありますか？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(4, 0)">50万円以下 (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(4, 10)">50〜100万円 (10点)</button>
+                        <button class="check-btn" onclick="selectAnswer(4, 25)">100万円以上 (25点)</button>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-question">Q5. 過去5年以内に債務整理（自己破産・任意整理等）をしたことはありますか？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(5, 0)">ない (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(5, 100)">ある (100点)</button>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-question">Q6. 過去1年以内に携帯電話の契約で審査落ちしたことはありますか？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(6, 0)">ない (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(6, 20)">1回ある (20点)</button>
+                        <button class="check-btn" onclick="selectAnswer(6, 40)">2回以上ある (40点)</button>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-question">Q7. クレジットカードの利用可能枠に対する使用率は？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(7, 0)">30%以下 (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(7, 10)">30〜70% (10点)</button>
+                        <button class="check-btn" onclick="selectAnswer(7, 25)">70%以上 (25点)</button>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-question">Q8. 過去に携帯料金の強制解約を受けたことはありますか？</div>
+                    <div class="check-options">
+                        <button class="check-btn" onclick="selectAnswer(8, 0)">ない (0点)</button>
+                        <button class="check-btn" onclick="selectAnswer(8, 60)">ある (60点)</button>
+                    </div>
+                </div>
+
+                <button class="check-btn" style="margin-top: 25px; background: white; color: #667eea; font-size: 1.2em; padding: 18px;" onclick="calculateScore()">📊 診断結果を見る</button>
+
+                <div class="result-box" id="resultBox">
+                    <h4 style="text-align: center; margin-bottom: 20px;">あなたの診断結果</h4>
+                    <div class="score-display" id="scoreDisplay"></div>
+                    <div id="recommendation"></div>
+                </div>
+            </div>
+
+            <script>
+                let answers = {};
+                
+                function selectAnswer(questionNum, score) {
+                    answers[questionNum] = score;
+                    // ボタンのスタイル更新
+                    const buttons = event.target.parentElement.querySelectorAll('.check-btn');
+                    buttons.forEach(btn => btn.classList.remove('selected'));
+                    event.target.classList.add('selected');
+                }
+                
+                function calculateScore() {
+                    if (Object.keys(answers).length < 8) {
+                        alert('全ての質問に回答してください');
+                        return;
+                    }
+                    
+                    const totalScore = Object.values(answers).reduce((a, b) => a + b, 0);
+                    const resultBox = document.getElementById('resultBox');
+                    const scoreDisplay = document.getElementById('scoreDisplay');
+                    const recommendation = document.getElementById('recommendation');
+                    
+                    let status, statusColor, message, advice;
+                    
+                    if (totalScore <= 15) {
+                        status = '✅ ホワイト（優良）';
+                        statusColor = 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)';
+                        message = 'あなたの信用状態は非常に良好です！';
+                        advice = '<p><strong>審査通過率: 95%以上</strong></p><p>ほぼ全てのMNP契約が問題なく通ります。高額端末の分割審査も問題ありません。このまま良好な支払い履歴を維持しましょう。</p>';
+                    } else if (totalScore <= 50) {
+                        status = '⚠️ イエロー（注意）';
+                        statusColor = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+                        message = '少し注意が必要な状態です';
+                        advice = '<p><strong>審査通過率: 70〜90%</strong></p><p>基本的には審査に通りますが、高額端末や複数回線契約では落ちる可能性があります。1ヶ月間、以下の改善策を実践してください。</p>';
+                    } else if (totalScore <= 100) {
+                        status = '🚨 グレー（危険）';
+                        statusColor = 'linear-gradient(135deg, #fc466b 0%, #3f5efb 100%)';
+                        message = '審査落ちリスクが高い状態です';
+                        advice = '<p><strong>審査通過率: 40〜65%</strong></p><p>このまま申込むと審査落ちする可能性が高いです。3ヶ月間の信用回復プログラムを必ず実践してから再挑戦してください。</p>';
+                    } else {
+                        status = '❌ ブラック';
+                        statusColor = 'linear-gradient(135deg, #434343 0%, #000000 100%)';
+                        message = '現在、審査通過は非常に困難です';
+                        advice = '<p><strong>審査通過率: 10%以下</strong></p><p>重大な信用問題があります。まずは専門家（弁護士・FP）に相談し、債務整理や信用情報の開示請求から始めてください。回復には最低6ヶ月〜5年かかります。</p>';
+                    }
+                    
+                    scoreDisplay.innerHTML = `
+                        <div class="score-label">${status}</div>
+                        <div class="score-number">${totalScore}点</div>
+                        <div style="font-size: 1.2em; margin-top: 10px;">${message}</div>
+                    `;
+                    scoreDisplay.style.background = statusColor;
+                    
+                    recommendation.innerHTML = `
+                        <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-top: 20px;">
+                            ${advice}
+                        </div>
+                    `;
+                    
+                    resultBox.style.display = 'block';
+                    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            </script>
+        </div>
+
+        <div class="content-box">
+            <h2>📈 CICスコア改善3ヶ月プログラム</h2>
+            
+            <div class="alert-box info">
+                <div class="alert-title">このプログラムで得られる効果</div>
+                <ul>
+                    <li>グレーゾーン（危険）→ イエロー（注意）への改善</li>
+                    <li>審査通過率が40%→85%に向上</li>
+                    <li>高額端末の分割審査も通りやすくなる</li>
+                    <li>将来的な住宅ローン・車ローンにも好影響</li>
+                </ul>
+            </div>
+
+            <div class="improvement-plan">
+                <h3 style="color: #2c3e50; border: none; padding: 0; margin-bottom: 25px;">📅 週次アクションプラン</h3>
+
+                <div class="week-plan">
+                    <div class="week-title">第1週：現状把握と緊急対応</div>
+                    <ol>
+                        <li><strong>CIC情報開示請求</strong>（郵送: 1,000円、スマホ: 1,000円）
+                            <ul style="margin-top: 8px;">
+                                <li>公式サイト: https://www.cic.co.jp</li>
+                                <li>自分の信用情報を正確に把握</li>
+                                <li>延滞記録・申込履歴を確認</li>
+                            </ul>
+                        </li>
+                        <li><strong>未払い・延滞の即時解消</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>61日以上の延滞は最優先で完済</li>
+                                <li>携帯料金の未払いを全額清算</li>
+                                <li>クレジットカードのリボ残高を確認</li>
+                            </ul>
+                        </li>
+                        <li><strong>支払い方法の自動化設定</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>全てのカード・携帯を口座振替に変更</li>
+                                <li>引落日前に必ず残高確認</li>
+                                <li>給料日直後に一括引落し設定</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="week-plan">
+                    <div class="week-title">第2〜4週：信用回復の基礎固め</div>
+                    <ol>
+                        <li><strong>クレジットカード利用率を30%以下に抑える</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>限度額50万円なら月15万円以内に</li>
+                                <li>使ったら即座に繰上返済</li>
+                                <li>リボ払い・分割払いを避ける</li>
+                            </ul>
+                        </li>
+                        <li><strong>新規申込みを一切しない</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>クレジットカード申込み禁止</li>
+                                <li>ローン・分割払いの申込み禁止</li>
+                                <li>携帯電話の複数回線契約禁止</li>
+                            </ul>
+                        </li>
+                        <li><strong>毎週の支払い状況チェック</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>全ての請求書を確認</li>
+                                <li>引落し結果を必ず確認</li>
+                                <li>延滞ゼロを継続</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="week-plan">
+                    <div class="week-title">第5〜8週：スコア向上期</div>
+                    <ol>
+                        <li><strong>少額利用＋即時返済でプラス実績を積む</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>月5,000円程度をカードで決済</li>
+                                <li>請求前に全額返済（繰上返済）</li>
+                                <li>「適切に利用・返済している」記録を作る</li>
+                            </ul>
+                        </li>
+                        <li><strong>不要なクレジットカードを解約</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>使っていないカードは解約</li>
+                                <li>総与信枠を減らすことで印象改善</li>
+                                <li>ただし最低1枚は残す</li>
+                            </ul>
+                        </li>
+                        <li><strong>CIC情報の再確認</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>延滞記録が消えているか確認</li>
+                                <li>支払い状況が「正常」になっているか</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="week-plan">
+                    <div class="week-title">第9〜12週：最終仕上げとMNP準備</div>
+                    <ol>
+                        <li><strong>総負債額を可能な限り減らす</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>ボーナスで一括返済</li>
+                                <li>携帯の分割残債を完済</li>
+                                <li>リボ残高をゼロに</li>
+                            </ul>
+                        </li>
+                        <li><strong>最終CICチェック</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>3ヶ月の改善結果を確認</li>
+                                <li>異動情報がないか最終確認</li>
+                            </ul>
+                        </li>
+                        <li><strong>MNP申込み戦略を立てる</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>まずは店舗で1回線のみ申込み</li>
+                                <li>審査通過後、1ヶ月空けて2回線目</li>
+                                <li>一度に複数申込みしない</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>⚠️ 絶対にやってはいけないNG行動</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>NG行動</th>
+                    <th>なぜダメか</th>
+                    <th>正しい行動</th>
+                </tr>
+                <tr>
+                    <td>❌ 審査落ち直後に他社で再申込み</td>
+                    <td>「申込みブラック」になり、さらに審査が厳しくなる</td>
+                    <td>最低1ヶ月、できれば3ヶ月空ける</td>
+                </tr>
+                <tr>
+                    <td>❌ クレジットカードの現金化</td>
+                    <td>規約違反で強制解約→ブラックリスト入り確定</td>
+                    <td>絶対に利用しない</td>
+                </tr>
+                <tr>
+                    <td>❌ リボ払いの放置</td>
+                    <td>利息で負債が膨らみ、利用率が常に高い状態に</td>
+                    <td>最優先で完済する</td>
+                </tr>
+                <tr>
+                    <td>❌ 複数のキャリアで同時申込み</td>
+                    <td>全てのキャリアで審査落ち→申込みブラック化</td>
+                    <td>1社ずつ、間隔を空けて申込む</td>
+                </tr>
+                <tr>
+                    <td>❌ 延滞を軽視する</td>
+                    <td>「1日くらい」が命取り。61日で異動情報記載</td>
+                    <td>絶対に期日を守る</td>
+                </tr>
+                <tr>
+                    <td>❌ CIC情報を確認しない</td>
+                    <td>誤った情報が記載されていても気づかない</td>
+                    <td>年1回は必ず開示請求する</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-box">
+            <h2>📞 CIC情報開示請求の完全ガイド</h2>
+            
+            <div class="cic-card">
+                <h4>📱 スマホで開示請求（最速・推奨）</h4>
+                <ol style="color: white;">
+                    <li>CIC公式アプリをダウンロード（iOS/Android対応）</li>
+                    <li>クレジットカードで手数料1,000円を支払い</li>
+                    <li>本人確認（電話番号認証）</li>
+                    <li>即座にPDFで信用情報をダウンロード</li>
+                </ol>
+                <p style="margin-top: 15px; font-weight: 700;">⏱️ 所要時間: 約10分</p>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-title">CIC開示報告書の見方</div>
+                <ul>
+                    <li><strong>「$」マーク</strong>：正常な支払い（これが並んでいれば優良）</li>
+                    <li><strong>「A」マーク</strong>：未入金（延滞）があった月</li>
+                    <li><strong>「異動」の文字</strong>：61日以上の延滞または債務整理 → ブラック確定</li>
+                    <li><strong>申込情報</strong>：過去6ヶ月の申込履歴（4件以上は要注意）</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📝 まとめ：信用回復への道のり</h2>
+            
+            <div class="alert-box success">
+                <div class="alert-title">3ヶ月プログラムの成功事例</div>
+                <p><strong>Aさん（30代男性）の場合：</strong></p>
+                <ul>
+                    <li>初期スコア: 85点（グレーゾーン）</li>
+                    <li>3ヶ月後: 25点（イエローゾーン）</li>
+                    <li>改善内容: リボ残高45万円を完済、クレカ利用率を20%に削減、延滞ゼロを継続</li>
+                    <li>結果: MNP審査に無事通過、iPhone 15 Pro Max一括1円+CB 65,000円を獲得</li>
+                </ul>
+            </div>
+
+            <div class="alert-box info" style="margin-top: 30px;">
+                <div class="alert-title">最後に</div>
+                <p>信用情報は<strong>一生モノの財産</strong>です。MNPだけでなく、住宅ローン、車ローン、クレジットカード審査など、人生のあらゆる場面で影響します。</p>
+                <p style="margin-top: 15px; font-weight: 700;">たった3ヶ月の努力で、今後数十年の信用を守れます。今日から始めましょう！</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>きいさん無料コンサル 特典21</p>
+        <p style="margin-top: 15px; font-size: 0.95em;">※ CIC情報は個人の信用情報であり、慎重に取り扱ってください。<br>本プログラムは一般的な改善方法であり、個別の状況により効果は異なります。</p>
+    </div>
+</body>
+</html>

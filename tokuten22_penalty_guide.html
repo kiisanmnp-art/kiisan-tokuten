@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典22 短期解約ペナルティ完全回避マニュアル | きいさん無料コンサル</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .header-logo {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: 800;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2em;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid #ee0979;
+            font-weight: 800;
+        }
+        
+        h3 {
+            color: #ee0979;
+            font-size: 1.5em;
+            margin: 35px 0 25px 0;
+            padding-left: 20px;
+            border-left: 6px solid #ee0979;
+            font-weight: 700;
+        }
+        
+        h4 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 700;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .alert-box.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .alert-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .alert-box.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .alert-title {
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-title::before {
+            content: "⚠️";
+            margin-right: 12px;
+            font-size: 1.3em;
+        }
+        
+        .alert-box.success .alert-title::before {
+            content: "✓";
+        }
+        
+        .alert-box.info .alert-title::before {
+            content: "ℹ️";
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .comparison-table td {
+            padding: 18px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+        
+        .carrier-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .carrier-card h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 30px 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 20px 0 20px 60px;
+            border-left: 3px solid #ee0979;
+            margin-left: 20px;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #ee0979;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #ee0979;
+        }
+        
+        .timeline-month {
+            position: absolute;
+            left: -50px;
+            top: 20px;
+            background: #2c3e50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+        
+        .penalty-card {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .penalty-amount {
+            font-size: 2em;
+            font-weight: 800;
+            color: #dc3545;
+            margin: 15px 0;
+        }
+        
+        .safe-zone {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 35px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content-box {
+                padding: 25px 20px;
+            }
+            
+            .timeline-month {
+                left: -60px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">⚖️ きいさん無料コンサル特典</div>
+        <h1>🛡️ 特典22<br>短期解約ペナルティ完全回避マニュアル<br>【キャリア別ボーダーライン一覧】</h1>
+        <div class="header-subtitle">ブラックリスト入りを防ぎ、安全にMNPを繰り返す完全ガイド</div>
+    </div>
+
+    <div class="container">
+        <div class="content-box">
+            <h2>⚠️ 短期解約ペナルティの真実</h2>
+            
+            <div class="alert-box danger">
+                <div class="alert-title">知らないと危険！</div>
+                <p>短期間（通常6ヶ月以内）で契約と解約を繰り返すと、各キャリアの<strong>「社内ブラックリスト」</strong>に登録され、今後そのキャリアでの契約が<strong>永久に不可能</strong>になる可能性があります。</p>
+            </div>
+
+            <h3>短期解約ペナルティとは？</h3>
+            
+            <div class="penalty-card">
+                <h4>📛 ペナルティの種類</h4>
+                <ol>
+                    <li><strong>社内ブラックリスト登録</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>該当キャリアでの新規契約が数年間〜永久に不可</li>
+                            <li>家族名義でも住所が同じだと審査落ち</li>
+                            <li>他キャリアには情報共有されない（基本的に）</li>
+                        </ul>
+                    </li>
+                    <li><strong>キャッシュバック没収</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>受取前の解約でCB権利が消滅</li>
+                            <li>既に受取済みでも返還請求される場合あり</li>
+                            <li>契約書の「最低利用期間」条項を要確認</li>
+                        </ul>
+                    </li>
+                    <li><strong>端末代一括請求</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>実質0円の残債が一括請求</li>
+                            <li>月額割引が消滅し、定価との差額を請求</li>
+                            <li>10万円超の請求も珍しくない</li>
+                        </ul>
+                    </li>
+                    <li><strong>違約金（一部プラン）</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>旧プラン契約者は9,500円〜10,450円</li>
+                            <li>2019年10月以降のプランは原則0円</li>
+                            <li>ただし端末購入プログラムは別途条件あり</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📊 キャリア別ボーダーライン完全一覧</h2>
+            
+            <h3>docomo（ドコモ）</h3>
+            
+            <div class="carrier-card">
+                <h4>📱 ドコモの短期解約基準</h4>
+                <table style="width: 100%; color: white; margin-top: 15px;">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);"><strong>安全ライン</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);">契約から<strong>6ヶ月以上</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);"><strong>警告ライン</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);">契約から<strong>3〜6ヶ月</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>危険ライン</strong></td>
+                        <td style="padding: 10px;">契約から<strong>3ヶ月以内</strong></td>
+                    </tr>
+                </table>
+                <p style="margin-top: 20px; font-weight: 700;">💡 推奨：最低でも<strong>181日間（約6ヶ月）</strong>は維持すること</p>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-title">ドコモの特殊ルール</div>
+                <ul>
+                    <li><strong>「いつでもカエドキプログラム」</strong>利用時は24ヶ月推奨</li>
+                    <li>過去1年以内に2回線以上の短期解約歴があると要注意</li>
+                    <li>ahamoからドコモへのプラン変更は「MNP」扱いにならない</li>
+                    <li>店頭契約とオンライン契約で基準が異なる可能性あり</li>
+                </ul>
+            </div>
+
+            <h3>au（エーユー）</h3>
+            
+            <div class="carrier-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <h4>📱 auの短期解約基準</h4>
+                <table style="width: 100%; color: white; margin-top: 15px;">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);"><strong>安全ライン</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);">契約から<strong>6ヶ月以上</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);"><strong>警告ライン</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);">契約から<strong>4〜6ヶ月</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>危険ライン</strong></td>
+                        <td style="padding: 10px;">契約から<strong>4ヶ月以内</strong></td>
+                    </tr>
+                </table>
+                <p style="margin-top: 20px; font-weight: 700;">💡 推奨：最低でも<strong>180日間</strong>は維持すること</p>
+            </div>
+
+            <div class="alert-box danger">
+                <div class="alert-title">auの厳しい判定基準</div>
+                <ul>
+                    <li>auは3キャリアの中で<strong>最も厳しい</strong>と言われている</li>
+                    <li><strong>「スマホトクするプログラム」</strong>利用時は2年維持が実質条件</li>
+                    <li>過去にau解約歴がある場合、6ヶ月でも短期扱いされる報告あり</li>
+                    <li>UQモバイルとauの行き来も「転々」として記録される</li>
+                </ul>
+            </div>
+
+            <h3>Softbank（ソフトバンク）</h3>
+            
+            <div class="carrier-card" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                <h4>📱 ソフトバンクの短期解約基準</h4>
+                <table style="width: 100%; color: white; margin-top: 15px;">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);"><strong>安全ライン</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);">契約から<strong>6ヶ月以上</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);"><strong>警告ライン</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.3);">契約から<strong>3〜6ヶ月</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>危険ライン</strong></td>
+                        <td style="padding: 10px;">契約から<strong>3ヶ月以内</strong></td>
+                    </tr>
+                </table>
+                <p style="margin-top: 20px; font-weight: 700;">💡 推奨：最低でも<strong>6ヶ月</strong>は維持すること</p>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-title">ソフトバンクの独自ルール</div>
+                <ul>
+                    <li>比較的「緩い」との口コミが多い（あくまで3社比較）</li>
+                    <li>ただし<strong>「新トクするサポート」</strong>利用時は2年推奨</li>
+                    <li>Y!mobileとSoftbankの行き来も記録される</li>
+                    <li>PayPayポイント還元系キャンペーンは6ヶ月維持が条件</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📅 安全な解約タイミングカレンダー</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-month">0ヶ月</div>
+                    <h4>契約日</h4>
+                    <p>MNP契約完了。ここから日数カウント開始。</p>
+                    <div class="penalty-card" style="margin-top: 15px;">
+                        <strong>⚠️ この時点での解約：</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>即ブラックリスト入り確定</li>
+                            <li>全キャリアで同様</li>
+                            <li>絶対に避けるべき</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-month">3ヶ月</div>
+                    <h4>危険ゾーン脱出</h4>
+                    <p>最も危険な期間を脱出。ただし、まだ安全ではない。</p>
+                    <div class="alert-box" style="margin-top: 15px;">
+                        <strong>⚠️ 3ヶ月での解約：</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>docomo・Softbank：ブラックリスク「高」</li>
+                            <li>au：ほぼ確実にブラックリスト入り</li>
+                            <li>やむを得ない場合のみ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-month">6ヶ月</div>
+                    <h4>安全ライン到達</h4>
+                    <p>一般的な「短期解約」の定義から外れる。解約可能ゾーン。</p>
+                    <div class="safe-zone" style="margin-top: 15px;">
+                        <strong>✅ 6ヶ月での解約：</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>docomo・Softbank：安全（ブラックリスク低）</li>
+                            <li>au：やや注意（過去歴次第）</li>
+                            <li><strong>推奨解約タイミング</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-month">12ヶ月</div>
+                    <h4>完全セーフゾーン</h4>
+                    <p>どのキャリアでも問題なし。次のMNPも自由。</p>
+                    <div class="safe-zone" style="margin-top: 15px;">
+                        <strong>✅ 12ヶ月での解約：</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>全キャリアで完全に安全</li>
+                            <li>過去に短期解約歴があっても問題なし</li>
+                            <li>理想的な解約タイミング</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>🎯 ケース別：ペナルティ回避戦略</h2>
+            
+            <h3>ケース1：端末目当てのMNP（実質0円狙い）</h3>
+            <div class="safe-zone">
+                <h4>推奨戦略</h4>
+                <ol>
+                    <li>契約から<strong>6ヶ月+1日</strong>で解約</li>
+                    <li>端末は即売却せず、6ヶ月は手元で保管（証拠として）</li>
+                    <li>最安プラン（3GB以下）に即変更し、月額負担を最小化</li>
+                    <li>CB受取条件を必ず確認（多くは6ヶ月維持が条件）</li>
+                </ol>
+                <p style="margin-top: 15px; font-weight: 700;">💰 実質コスト：最安プラン 2,000円×6ヶ月 = 12,000円</p>
+            </div>
+
+            <h3>ケース2：CB狙いのMNP（現金目当て）</h3>
+            <div class="safe-zone">
+                <h4>推奨戦略</h4>
+                <ol>
+                    <li>契約書でCB受取条件を確認（通常4〜8ヶ月後）</li>
+                    <li>CB受取月の翌月に解約（例：8ヶ月後受取なら9ヶ月目解約）</li>
+                    <li>受取前に解約すると権利消滅＋ブラックリスク</li>
+                    <li>受取方法を必ず確認（郵便為替・銀行振込・ポイント等）</li>
+                </ol>
+                <p style="margin-top: 15px; font-weight: 700;">⚠️ 注意：CB受取前の解約は絶対NG</p>
+            </div>
+
+            <h3>ケース3：複数回線の同時MNP</h3>
+            <div class="alert-box danger">
+                <div class="alert-title">最もリスクが高いパターン</div>
+                <ol>
+                    <li>同日に3回線以上契約 → 全て6ヶ月で同時解約</li>
+                    <li>→ キャリアから「転売目的」と判断される</li>
+                    <li>→ 本人＋家族全員がブラックリスト入りの可能性</li>
+                </ol>
+            </div>
+            
+            <div class="safe-zone">
+                <h4>安全な複数回線戦略</h4>
+                <ol>
+                    <li>契約は1回線ずつ、<strong>最低1ヶ月空ける</strong></li>
+                    <li>解約も1回線ずつ、<strong>最低2週間空ける</strong></li>
+                    <li>維持期間をズラす（1回線目6ヶ月、2回線目7ヶ月、3回線目8ヶ月）</li>
+                    <li>解約理由を準備（「引っ越しで電波が悪い」等）</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📋 解約時の注意事項チェックリスト</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>確認項目</th>
+                    <th>チェック内容</th>
+                    <th>リスク</th>
+                </tr>
+                <tr>
+                    <td>✅ 契約日からの日数</td>
+                    <td>正確に181日以上経過しているか</td>
+                    <td>短期解約扱い</td>
+                </tr>
+                <tr>
+                    <td>✅ CB受取済みか</td>
+                    <td>受取完了を書面で確認</td>
+                    <td>CB没収</td>
+                </tr>
+                <tr>
+                    <td>✅ 端末代残債</td>
+                    <td>残り何ヶ月分あるか</td>
+                    <td>一括請求</td>
+                </tr>
+                <tr>
+                    <td>✅ 違約金の有無</td>
+                    <td>旧プランなら9,500円発生</td>
+                    <td>予期せぬ請求</td>
+                </tr>
+                <tr>
+                    <td>✅ オプション解約</td>
+                    <td>不要オプションを全て解約済みか</td>
+                    <td>解約後も課金継続</td>
+                </tr>
+                <tr>
+                    <td>✅ MNP予約番号の期限</td>
+                    <td>15日以内に転出完了必須</td>
+                    <td>番号失効</td>
+                </tr>
+                <tr>
+                    <td>✅ 過去の解約歴</td>
+                    <td>同じキャリアで1年以内の解約歴</td>
+                    <td>ブラックリスク増</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-box">
+            <h2>⚠️ ブラックリスト入りしてしまった場合の対処法</h2>
+            
+            <div class="alert-box danger">
+                <div class="alert-title">ブラックリスト判定のサイン</div>
+                <ul>
+                    <li>オンライン申込みで即座に審査落ち</li>
+                    <li>店舗で「総合的な審査の結果...」と言われる</li>
+                    <li>理由を聞いても「お答えできません」</li>
+                    <li>家族名義でも同じ住所だと審査落ち</li>
+                </ul>
+            </div>
+
+            <h3>対処法</h3>
+            <ol>
+                <li><strong>該当キャリアでの契約は諦める</strong>（最低2年、場合により永久）</li>
+                <li><strong>他の2キャリアで契約する</strong>（情報は共有されない）</li>
+                <li><strong>サブブランドを試す</strong>（ahamo、povo、LINEMO、UQ、Y!mobile）</li>
+                <li><strong>格安SIMに移行</strong>（審査基準が異なる）</li>
+                <li><strong>時間を置く</strong>（2年後に再チャレンジ）</li>
+            </ol>
+
+            <div class="alert-box info" style="margin-top: 25px;">
+                <div class="alert-title">重要な事実</div>
+                <p>キャリアのブラックリストは<strong>CIC等の信用情報機関とは別</strong>です。つまり：</p>
+                <ul>
+                    <li>docomoでブラックでも、au・Softbankは無関係</li>
+                    <li>住宅ローンやクレジットカードには影響しない</li>
+                    <li>ただし、TCAという業界団体で「不払い情報」は共有される</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>📝 まとめ：安全なMNPサイクルの作り方</h2>
+            
+            <div class="safe-zone">
+                <div class="alert-title">ゴールデンルール</div>
+                <ol>
+                    <li><strong>最低6ヶ月は維持する</strong>（181日以上）</li>
+                    <li><strong>CB受取を確認してから解約</strong></li>
+                    <li><strong>同じキャリアに戻るのは1年以上空ける</strong></li>
+                    <li><strong>複数回線は時期をズラす</strong></li>
+                    <li><strong>端末は即売却しない</strong>（6ヶ月保管）</li>
+                    <li><strong>解約理由を用意しておく</strong></li>
+                    <li><strong>過去の解約歴を記録する</strong>（スプレッドシート推奨）</li>
+                </ol>
+            </div>
+
+            <div class="alert-box success" style="margin-top: 30px;">
+                <div class="alert-title">最後に</div>
+                <p>短期解約ペナルティは<strong>「グレーゾーン」</strong>であり、明確な基準は公表されていません。しかし、このマニュアルの基準を守れば、99%の確率でブラックリスト入りを回避できます。</p>
+                <p style="margin-top: 15px; font-weight: 700;">「安全第一」でMNPを楽しみましょう！</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>きいさん無料コンサル 特典22</p>
+        <p style="margin-top: 15px; font-size: 0.95em;">※ 本情報は2025年1月時点のものです。キャリアの判断基準は公表されておらず、変更される可能性があります。</p>
+    </div>
+</body>
+</html>
