@@ -1,12 +1,650 @@
+bash
+
+
+# index.htmlの内容を表示
+cat /mnt/user-data/outputs/index.html
+出力
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>MNP特典ライブラリ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きいさん無料コンサル特典8〜30 | MNP完全ガイド</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            pointer-events: none;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: relative;
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            position: relative;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 40px auto;
+            position: relative;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 18px 25px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        
+        .filter-tab {
+            padding: 12px 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        
+        .filter-tab:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .filter-tab.active {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            animation: fadeIn 1s ease 0.8s both;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+        
+        .card-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .card-emoji {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .card-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .card-desc {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .card-size {
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .card-category {
+            padding: 6px 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 60px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .hero p { font-size: 1.1em; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .stats { gap: 30px; }
+            .stat-number { font-size: 2.5em; }
+        }
+        
+        .hidden { display: none; }
+    </style>
 </head>
 <body>
-  <h1>MNP特典ライブラリ📱✨</h1>
-  <p>ここからコンテンツにアクセスできます。<br>
-     ※現在テストページです。</p>
+    <div class="hero">
+        <h1>🎁 きいさん無料コンサル特典8〜30</h1>
+        <p>MNP完全ガイド集</p>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 特典を検索...（例：審査、CB、iPhone）">
+        </div>
+        
+        <div class="filter-tabs">
+            <div class="filter-tab active" data-category="all">すべて</div>
+            <div class="filter-tab" data-category="basic">基礎編</div>
+            <div class="filter-tab" data-category="practice">実践編</div>
+            <div class="filter-tab" data-category="advanced">応用編</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="cards-grid" id="cardsGrid">
+            <!-- 特典8 -->
+            <div class="card" data-category="basic" data-keywords="mnp弾 povo 維持費 格安sim" onclick="location.href='./tokuten08_mnp_bullet.html'">
+                <div class="card-number">8</div>
+                <div class="card-emoji">💰</div>
+                <div class="card-title">MNP弾作成・音声SIM最安維持費ランキングTOP10</div>
+                <div class="card-desc">povo2.0で年間440円維持！格安SIMランキングと運用シート完全版</div>
+                <div class="card-meta">
+                    <div class="card-size">38KB</div>
+                    <div class="card-category">基礎編</div>
+                </div>
+            </div>
+            
+            <!-- 特典9 -->
+            <div class="card" data-category="basic" data-keywords="決算期 カレンダー タイミング 3月 9月" onclick="location.href='./tokuten09_calendar.html'">
+                <div class="card-number">9</div>
+                <div class="card-emoji">📅</div>
+                <div class="card-title">キャリア決算期を狙い撃ち！年間MNP最強カレンダー2025-2026</div>
+                <div class="card-desc">3月・9月・12月が狙い目！キャッシュバック最大化のベストタイミング</div>
+                <div class="card-meta">
+                    <div class="card-size">32KB</div>
+                    <div class="card-category">基礎編</div>
+                </div>
+            </div>
+            
+            <!-- 特典10 -->
+            <div class="card" data-category="basic" data-keywords="複数回線 交渉 家族 3回線" onclick="location.href='./tokuten10_multiple.html'">
+                <div class="card-number">10</div>
+                <div class="card-emoji">💪</div>
+                <div class="card-title">複数回線同時MNPでまとめて割増を引き出す交渉術</div>
+                <div class="card-desc">3回線で18万円超のCB獲得！実践的な交渉トークスクリプト付き</div>
+                <div class="card-meta">
+                    <div class="card-size">18KB</div>
+                    <div class="card-category">基礎編</div>
+                </div>
+            </div>
+            
+            <!-- 特典11 -->
+            <div class="card" data-category="basic" data-keywords="審査 cic ブラック 信用情報" onclick="location.href='./tokuten11_shinsa.html'">
+                <div class="card-number">11</div>
+                <div class="card-emoji">✅</div>
+                <div class="card-title">審査落ち経験者が語る！MNP契約審査を100%通すチェックリスト</div>
+                <div class="card-desc">審査の仕組みから対策まで完全網羅。CICスコア改善方法も解説</div>
+                <div class="card-meta">
+                    <div class="card-size">19KB</div>
+                    <div class="card-category">基礎編</div>
+                </div>
+            </div>
+            
+            <!-- 特典12 -->
+            <div class="card" data-category="practice" data-keywords="転売 ブラックリスト 短期解約" onclick="location.href='./tokuten12.html'">
+                <div class="card-number">12</div>
+                <div class="card-emoji">🛡️</div>
+                <div class="card-title">端末転売ヤーと間違われない健全MNPの立ち回り完全版</div>
+                <div class="card-desc">ブラックリスト回避の完全マニュアル。安全なMNP実践方法</div>
+                <div class="card-meta">
+                    <div class="card-size">5.6KB</div>
+                    <div class="card-category">実践編</div>
+                </div>
+            </div>
+            
+            <!-- 特典13 -->
+            <div class="card" data-category="practice" data-keywords="esim 即日 デュアルsim" onclick="location.href='./tokuten13.html'">
+                <div class="card-number">13</div>
+                <div class="card-emoji">📲</div>
+                <div class="card-title">eSIM×MNPの新常識！即日開通＆デュアル運用マスターガイド</div>
+                <div class="card-desc">最速30分でMNP完了！eSIMならではのメリットを最大活用</div>
+                <div class="card-meta">
+                    <div class="card-size">5.6KB</div>
+                    <div class="card-category">実践編</div>
+                </div>
+            </div>
+            
+            <!-- 特典14 -->
+            <div class="card" data-category="practice" data-keywords="引き止め ポイント 交渉" onclick="location.href='./tokuten14.html'">
+                <div class="card-number">14</div>
+                <div class="card-emoji">📊</div>
+                <div class="card-title">【実録データ】3大キャリアMNP引き止めポイント平均額＆交渉トーク集</div>
+                <div class="card-desc">引き止めポイント3万円超を狙う！実際の交渉事例とトーク集</div>
+                <div class="card-meta">
+                    <div class="card-size">5.6KB</div>
+                    <div class="card-category">実践編</div>
+                </div>
+            </div>
+            
+            <!-- 特典15 -->
+            <div class="card" data-category="practice" data-keywords="名義変更 家族 タイミング" onclick="location.href='./tokuten15.html'">
+                <div class="card-number">15</div>
+                <div class="card-emoji">👨‍👩‍👧‍👦</div>
+                <div class="card-title">名義変更×MNP最適ルート！家族間で損しない完璧タイミング表</div>
+                <div class="card-desc">手数料3,300円で10万円得する方法。家族名義活用の完全ガイド</div>
+                <div class="card-meta">
+                    <div class="card-size">5.6KB</div>
+                    <div class="card-category">実践編</div>
+                </div>
+            </div>
+            
+            <!-- 特典16 -->
+            <div class="card" data-category="practice" data-keywords="ahamo povo linemo 比較" onclick="location.href='./tokuten16.html'">
+                <div class="card-number">16</div>
+                <div class="card-emoji">📊</div>
+                <div class="card-title">ahamo/povo/LINEMO徹底比較！MNP時の隠れメリット＆デメリット全網羅</div>
+                <div class="card-desc">3大オンライン専用プラン完全比較。あなたに最適なプランを診断</div>
+                <div class="card-meta">
+                    <div class="card-size">5.6KB</div>
+                    <div class="card-category">実践編</div>
+                </div>
+            </div>
+            
+            <!-- 特典17 -->
+            <div class="card" data-category="practice" data-keywords="楽天モバイル 1円 出口戦略" onclick="location.href='./tokuten17.html'">
+                <div class="card-number">17</div>
+                <div class="card-emoji">🔴</div>
+                <div class="card-title">楽天モバイル1円運用からの最強MNP出口戦略【2025最新版】</div>
+                <div class="card-desc">月額1,078円→6万円CB獲得！楽天からのMNP完全ガイド</div>
+                <div class="card-meta">
+                    <div class="card-size">5.6KB</div>
+                    <div class="card-category">実践編</div>
+                </div>
+            </div>
+            
+            <!-- 特典18 -->
+            <div class="card" data-category="advanced" data-keywords="iphone 実質0円 罠 総額" onclick="location.href='./tokuten18_iphone_trap.html'">
+                <div class="card-number">18</div>
+                <div class="card-emoji">📱</div>
+                <div class="card-title">「実質0円iPhone」の罠！本当の総額計算シート</div>
+                <div class="card-desc">隠れコスト完全暴露。実質0円の本当の意味を理解する</div>
+                <div class="card-meta">
+                    <div class="card-size">35KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典19 -->
+            <div class="card" data-category="advanced" data-keywords="予約番号 期限 駆け込み" onclick="location.href='./tokuten19_mnp_deadline.html'">
+                <div class="card-number">19</div>
+                <div class="card-emoji">⏰</div>
+                <div class="card-title">MNP予約番号有効期限ギリギリ！駆け込み契約の裏ワザ</div>
+                <div class="card-desc">期限切れ回避術と緊急時の対処法。15日間を有効活用</div>
+                <div class="card-meta">
+                    <div class="card-size">40KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典20 -->
+            <div class="card" data-category="advanced" data-keywords="店舗 マップ 高額cb 地域" onclick="location.href='./tokuten20_store_map.html'">
+                <div class="card-number">20</div>
+                <div class="card-emoji">🗺️</div>
+                <div class="card-title">全国MNP高額CB店舗マップ【2025年版】</div>
+                <div class="card-desc">地域別優良店情報。あなたの街の高額CB店舗を検索</div>
+                <div class="card-meta">
+                    <div class="card-size">38KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典21 -->
+            <div class="card" data-category="advanced" data-keywords="cic スコア 審査 診断" onclick="location.href='./tokuten21_cic_checker.html'">
+                <div class="card-number">21</div>
+                <div class="card-emoji">🔍</div>
+                <div class="card-title">CICスコアチェッカー付き！MNP審査通過率診断</div>
+                <div class="card-desc">審査通過率判定ツール。あなたの信用スコアを診断</div>
+                <div class="card-meta">
+                    <div class="card-size">34KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典22 -->
+            <div class="card" data-category="advanced" data-keywords="短期解約 ペナルティ ブラックリスト" onclick="location.href='./tokuten22_penalty_guide.html'">
+                <div class="card-number">22</div>
+                <div class="card-emoji">⚠️</div>
+                <div class="card-title">短期解約ペナルティ完全ガイド</div>
+                <div class="card-desc">ブラックリスト回避の鉄則。6ヶ月維持の重要性</div>
+                <div class="card-meta">
+                    <div class="card-size">28KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典23 -->
+            <div class="card" data-category="advanced" data-keywords="サブブランド ループ ahamo linemo" onclick="location.href='./tokuten23_subbrand_loop.html'">
+                <div class="card-number">23</div>
+                <div class="card-emoji">🔄</div>
+                <div class="card-title">サブブランド無限ループ術</div>
+                <div class="card-desc">ahamo↔LINEMO循環で毎年CB獲得！永久機関的運用法</div>
+                <div class="card-meta">
+                    <div class="card-size">31KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典24 -->
+            <div class="card" data-category="advanced" data-keywords="5g エリア キャリア 診断" onclick="location.href='./tokuten24_5g_map.html'">
+                <div class="card-number">24</div>
+                <div class="card-emoji">📡</div>
+                <div class="card-title">5Gエリアマップ×MNP最適キャリア診断</div>
+                <div class="card-desc">地域別最適キャリア。あなたのエリアで最速のキャリアは？</div>
+                <div class="card-meta">
+                    <div class="card-size">29KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典25 -->
+            <div class="card" data-category="advanced" data-keywords="simロック 解除 unlocked" onclick="location.href='./tokuten25_simlock.html'">
+                <div class="card-number">25</div>
+                <div class="card-emoji">🔓</div>
+                <div class="card-title">SIMロック解除完全マニュアル</div>
+                <div class="card-desc">全キャリア対応。端末を自由に使えるようにする方法</div>
+                <div class="card-meta">
+                    <div class="card-size">25KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典26 -->
+            <div class="card" data-category="advanced" data-keywords="法人 法人契約 法人名義" onclick="location.href='./tokuten26_corporate.html'">
+                <div class="card-number">26</div>
+                <div class="card-emoji">🏢</div>
+                <div class="card-title">法人契約MNPの裏側</div>
+                <div class="card-desc">法人名義活用術。個人事業主でも可能な法人契約</div>
+                <div class="card-meta">
+                    <div class="card-size">11KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典27 -->
+            <div class="card" data-category="advanced" data-keywords="キャリアメール メール持ち運び" onclick="location.href='./tokuten27_email.html'">
+                <div class="card-number">27</div>
+                <div class="card-emoji">📧</div>
+                <div class="card-title">キャリアメール持ち運び徹底解説</div>
+                <div class="card-desc">メール移行ガイド。@docomo.ne.jpを維持したままMNP</div>
+                <div class="card-meta">
+                    <div class="card-size">7.7KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典28 -->
+            <div class="card" data-category="advanced" data-keywords="ふるさと納税 節税 組み合わせ" onclick="location.href='./tokuten28_furusato.html'">
+                <div class="card-number">28</div>
+                <div class="card-emoji">🎁</div>
+                <div class="card-title">ふるさと納税×MNP最強組み合わせ術</div>
+                <div class="card-desc">節税+CB獲得で年間15万円得する裏技</div>
+                <div class="card-meta">
+                    <div class="card-size">6.3KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典29 -->
+            <div class="card" data-category="advanced" data-keywords="youtube 動画 スクリプト" onclick="location.href='./tokuten29_video.html'">
+                <div class="card-number">29</div>
+                <div class="card-emoji">🎥</div>
+                <div class="card-title">MNP解説YouTube動画スクリプト集</div>
+                <div class="card-desc">動画作成用台本。そのまま使えるトークスクリプト</div>
+                <div class="card-meta">
+                    <div class="card-size">7.9KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+            
+            <!-- 特典30 -->
+            <div class="card" data-category="advanced" data-keywords="スプレッドシート 管理 収支" onclick="location.href='./tokuten30_spreadsheet.html'">
+                <div class="card-number">30</div>
+                <div class="card-emoji">📊</div>
+                <div class="card-title">MNP収支管理スプレッドシート</div>
+                <div class="card-desc">利益計算ツール。CB・維持費・端末売却を一元管理</div>
+                <div class="card-meta">
+                    <div class="card-size">12KB</div>
+                    <div class="card-category">応用編</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p style="font-size: 1.2em; margin-bottom: 15px;">💡 <strong>MNPを賢く活用しましょう！</strong></p>
+        <p style="opacity: 0.8;">© 2025 きいさん無料コンサル. All rights reserved.</p>
+        <p style="margin-top: 20px; opacity: 0.8;">
+            <a href="https://github.com/kiisanmnp-art/kiisan-tokuten" target="_blank">GitHub Repository</a>
+        </p>
+    </div>
+    
+    <script>
+        // 検索機能
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+                const keywords = card.dataset.keywords.toLowerCase();
+                
+                if (title.includes(searchTerm) || desc.includes(searchTerm) || keywords.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+        
+        // フィルター機能
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // アクティブタブ切り替え
+                filterTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                
+                cards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // 検索ボックスをクリア
+                searchInput.value = '';
+            });
+        });
+        
+        // カードホバーエフェクト強化
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+    </script>
 </body>
 </html>
